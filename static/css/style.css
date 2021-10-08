@@ -1,0 +1,22 @@
+h1 {
+    
+}
+
+*{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+/* color class */
+.die-color {
+  background-color: red;
+}
+
+.der-color {
+  background-color: blue;
+}
+
+.das-color {
+  background-color: green;
+}

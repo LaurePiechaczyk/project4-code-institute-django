@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="module" src="static/scripts/home/home.js"></script>
+
+{{ request.path }}
+
+<p>Welcome {{user.username}}</p>
+{% if user.username %}
+<p>Welcome {{user.username}}</p>
+{% endif %}
+
+<div>
+  <a href="{% url 'feminine' %}">
+    <button type="submit" class="btn die-color m-1">Die</button>
+  </a>
+
+  <a href="{% url 'masculine' %}">
+    <button type="submit" class="btn der-color">Der</button>
+  </a>
+  <a href="#"> 
+    <button type="submit" class="btn das-color m-1 ">Das</button>
+  </a>
+</div>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{theme}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    {% for category in categories %}
+    <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
+
+    {% endfor %}
+  </div>
+</div>
+
+{{theme_id}}
+
+<a href="{% url 'gender_category'  %}">
+  <button type="submit" class="btn die-color m-1">gender_category</button>
+</a>
+
+<div >
+  <button type="submit" class="btn btn-light m-1">English Traduction</button>
+  <button type="submit" class="btn btn-light m-1">English + Plural</button>
+</div>
+
+<div class="container">
+  <div class="grid-container"> 
+  {% for noun in nouns %}
+
+    <div class="grid-item">
+      <p>{{ noun.german_noun }}</p>
+      <p>{{ noun.english_noun }}</p>
+      <p>{{ noun.german_plural }}</p>
+     
+    </div> 
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
