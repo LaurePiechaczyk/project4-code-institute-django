@@ -2,51 +2,47 @@
 {% block content %}
 <script type="module" src="static/scripts/home/home.js"></script>
 
-{{ request.path }}
-{{theme_id}}
-{{theme}}
-{{theme.id}}
+<!-- {{ request.path }} {{theme_id}} {{theme}} {{theme.id}}   -->
 
-<p>Welcome {{user.username}}</p>
 {% if user.username %}
 <p>Welcome {{user.username}}</p>
 {% endif %}
 
+<!-- butons die der das -->
 {% if theme.id %}
-<a href="{% url 'categorie_feminine' theme.id %}">
-  <button type="submit" class="btn die-color m-1">die</button>
-</a>
+  <a href="{% url 'categorie_feminine' theme.id %}">
+    <button type="submit" class="btn die-color m-1">die</button>
+  </a>
 
-<a href="{% url 'categorie_masculine' theme.id %}">
-  <button type="submit" class="btn der-color m-1">der</button>
-</a>
+  <a href="{% url 'categorie_masculine' theme.id %}">
+    <button type="submit" class="btn der-color m-1">der</button>
+  </a>
 
-<a href="#">
-  <button type="submit" class="btn das-color m-1">das</button>
-</a>
+  <a href="#">
+    <button type="submit" class="btn das-color m-1">das</button>
+  </a>
 {% else %}
-<div>
-  <a href="{% url 'feminine' %}">
-    <button type="submit" class="btn die-color m-1">Die</button>
-  </a>
+  <div>
+    <a href="{% url 'feminine' %}">
+      <button type="submit" class="btn die-color m-1">Die</button>
+    </a>
 
-  <a href="{% url 'masculine' %}">
-    <button type="submit" class="btn der-color">Der</button>
-  </a>
-  <a href="#"> 
-    <button type="submit" class="btn das-color m-1 ">Das</button>
-  </a>
-</div>
-
+    <a href="{% url 'masculine' %}">
+      <button type="submit" class="btn der-color">Der</button>
+    </a>
+    <a href="#"> 
+      <button type="submit" class="btn das-color m-1 ">Das</button>
+    </a>
+  </div>
 {% endif %}
 
-
-
+<!-- Themes -->
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{theme}}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{% url 'home' %}">No theme</a>
     {% for category in categories %}
     <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
 
@@ -54,12 +50,7 @@
   </div>
 </div>
 
-{{theme_id}}
-
-<a href="{% url 'gender_category'  %}">
-  <button type="submit" class="btn die-color m-1">gender_category</button>
-</a>
-
+<!-- traduction and plural  -->
 <div >
   <button type="submit" class="btn btn-light m-1">English Traduction</button>
   <button type="submit" class="btn btn-light m-1">English + Plural</button>
