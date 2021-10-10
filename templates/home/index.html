@@ -9,6 +9,17 @@
 <p>Welcome {{user.username}}</p>
 {% endif %}
 
+{% if theme.id %}
+<a href="{% url 'ttt' theme.id %}">
+  <button type="submit" class="btn die-color m-1">ttt</button>
+</a>
+{% endif %}
+
+{{theme_id}}
+{{theme}}
+{{theme.id}}
+
+
 <div>
   <a href="{% url 'feminine' %}">
     <button type="submit" class="btn die-color m-1">Die</button>

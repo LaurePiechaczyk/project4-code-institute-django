@@ -7,6 +7,11 @@ from .models import Noun, GenderToDisplay, NounCategory
 number_of_displayed_word = 4
 ##############
 # Create your views here.
+
+def ttt(request):
+  return render(request, 'home/index.html')
+
+
 def home(request):
   categories = NounCategory.objects.all()
   context = {
