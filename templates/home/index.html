@@ -3,6 +3,9 @@
 <script type="module" src="static/scripts/home/home.js"></script>
 
 {{ request.path }}
+{{theme_id}}
+{{theme}}
+{{theme.id}}
 
 <p>Welcome {{user.username}}</p>
 {% if user.username %}
@@ -10,16 +13,18 @@
 {% endif %}
 
 {% if theme.id %}
-<a href="{% url 'ttt' theme.id %}">
-  <button type="submit" class="btn die-color m-1">ttt</button>
+<a href="{% url 'categorie_feminine' theme.id %}">
+  <button type="submit" class="btn die-color m-1">die</button>
 </a>
-{% endif %}
 
-{{theme_id}}
-{{theme}}
-{{theme.id}}
+<a href="{% url 'categorie_masculine' theme.id %}">
+  <button type="submit" class="btn der-color m-1">der</button>
+</a>
 
-
+<a href="#">
+  <button type="submit" class="btn das-color m-1">das</button>
+</a>
+{% else %}
 <div>
   <a href="{% url 'feminine' %}">
     <button type="submit" class="btn die-color m-1">Die</button>
@@ -32,6 +37,10 @@
     <button type="submit" class="btn das-color m-1 ">Das</button>
   </a>
 </div>
+
+{% endif %}
+
+
 
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

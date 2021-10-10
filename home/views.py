@@ -8,17 +8,6 @@ number_of_displayed_word = 4
 ##############
 # Create your views here.
 
-def ttt(request,category_id):
-  category = get_object_or_404(NounCategory, id=category_id)
-  context = index_with_gender_and_category('Feminin', category)
-  return render(request, 'home/index.html', context)
-
-
-def go_to_category(request, category_id): 
-  category = get_object_or_404(NounCategory, id=category_id)
-  context = index_with_gender_and_category('', category)
-  return render(request, 'home/index.html', context)
-
 def home(request):
   categories = NounCategory.objects.all()
   context = {
@@ -32,13 +21,33 @@ def gender_category(request):
   context = index_with_gender_and_category('Feminine', 'cat1')
   return render (request, 'home/index.html', context)
 
+
 def feminine(request):
   context = index_with_noun_list('Feminin')
   return render (request, 'home/index.html', context)
 
+
 def masculine(request):
   context = index_with_noun_list('Masculin')
   return render (request, 'home/index.html', context)
+
+
+def go_to_category(request, category_id): 
+  category = get_object_or_404(NounCategory, id=category_id)
+  context = index_with_gender_and_category('', category)
+  return render(request, 'home/index.html', context)
+
+
+def categorie_feminine(request,category_id):
+  category = get_object_or_404(NounCategory, id=category_id)
+  context = index_with_gender_and_category('Feminin', category)
+  return render(request, 'home/index.html', context)
+  
+
+def categorie_masculine(request,category_id):
+  category = get_object_or_404(NounCategory, id=category_id)
+  context = index_with_gender_and_category('Masculin', category)
+  return render(request, 'home/index.html', context)
 
 
 ######################
