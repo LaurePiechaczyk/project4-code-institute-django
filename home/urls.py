@@ -9,5 +9,5 @@ urlpatterns = [
     path('masculine', views.masculine, name='masculine'), 
     path('go_to_category/<category_id>', views.go_to_category, name='go_to_category'), 
     path('gender_category', views.gender_category, name='gender_category'), 
-    path('go_to_category/<int>', views.ttt, name='ttt'),
+    path('go_to_category/<category_id>/feminine', views.ttt, name='ttt'),
 ]
