@@ -4,70 +4,79 @@
 
 <!-- {{ request.path }} {{theme_id}} {{theme}} {{theme.id}}   -->
 
-{% if user.username %}
-<p>Welcome {{user.username}}</p>
-{% endif %}
+<div>
 
-<!-- butons die der das -->
-{% if theme.id %}
-  <a href="{% url 'categorie_feminine' theme.id %}">
-    <button type="submit" class="btn die-color m-1">die</button>
-  </a>
+  {% if user.username %}
+  <p>Welcome {{user.username}}</p>
+  {% endif %}
 
-  <a href="{% url 'categorie_masculine' theme.id %}">
-    <button type="submit" class="btn der-color m-1">der</button>
-  </a>
-
-  <a href="#">
-    <button type="submit" class="btn das-color m-1">das</button>
-  </a>
-{% else %}
-  <div>
-    <a href="{% url 'feminine' %}">
-      <button type="submit" class="btn die-color m-1">Die</button>
+  <!-- butons die der das -->
+  {% if theme.id %}
+  <div class="die-der-das-buttons">
+    <a href="{% url 'categorie_feminine' theme.id %}">
+      <button type="submit" class="btn die-color m-1">die</button>
     </a>
 
-    <a href="{% url 'masculine' %}">
-      <button type="submit" class="btn der-color">Der</button>
+    <a href="{% url 'categorie_masculine' theme.id %}">
+      <button type="submit" class="btn der-color m-1">der</button>
     </a>
-    <a href="#"> 
-      <button type="submit" class="btn das-color m-1 ">Das</button>
+
+    <a href="#">
+      <button type="submit" class="btn das-color m-1">das</button>
     </a>
   </div>
-{% endif %}
 
-<!-- Themes -->
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{theme}}
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="{% url 'home' %}">No theme</a>
-    {% for category in categories %}
-    <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
+  {% else %}
+    <div class="die-der-das-buttons">
+      <a href="{% url 'feminine' %}">
+        <button type="submit" class="btn die-color m-1">Die</button>
+      </a>
 
-    {% endfor %}
+      <a href="{% url 'masculine' %}">
+        <button type="submit" class="btn der-color">Der</button>
+      </a>
+      <a href="#"> 
+        <button type="submit" class="btn das-color m-1 ">Das</button>
+      </a>
+    </div>
+  {% endif %}
+
+  <!-- Themes -->
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{theme}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="{% url 'home' %}">No theme</a>
+      {% for category in categories %}
+      <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
+
+      {% endfor %}
+    </div>
   </div>
-</div>
 
-<!-- traduction and plural  -->
-<div >
-  <button type="submit" class="btn btn-light m-1">English Traduction</button>
-  <button type="submit" class="btn btn-light m-1">English + Plural</button>
-</div>
-
-<div class="container">
-  <div class="grid-container"> 
-  {% for noun in nouns %}
-
-    <div class="grid-item">
-      <p>{{ noun.german_noun }}</p>
-      <p>{{ noun.english_noun }}</p>
-      <p>{{ noun.german_plural }}</p>
-     
-    </div> 
-  {% endfor %}
+  <!-- traduction and plural  -->
+  <div >
+    <button type="submit" class="btn btn-light m-1">English Traduction</button>
+    <button type="submit" class="btn btn-light m-1">English + Plural</button>
   </div>
-</div>
 
+<div class="container all-words-display-container">
+  <div class="row">
+    {% for noun in nouns %}
+      <div class="col-sm die-color border border-dark text-center w-100 p-3 words-container">
+        <p class="german-noun ">{{ noun.german_noun }}</p>
+        <p class="english-noun font-weight-light">{{ noun.english_noun }}</p>
+        <p class="plural-noun font-weight-light">{{ noun.german_plural }}</p>
+      </div>
+      {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+      {% endif %}
+      {% endfor %}
+  </div>
+</div> 
+
+
+</div> 
 {% endblock %}

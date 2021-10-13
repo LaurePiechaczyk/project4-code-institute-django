@@ -3,7 +3,7 @@ from .models import Noun, NounCategory
 
 ##############
 
-number_of_displayed_word = 4
+number_of_displayed_word = 6
 ##############
 # Create your views here.
 
