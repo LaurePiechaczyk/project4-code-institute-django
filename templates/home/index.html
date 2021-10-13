@@ -4,7 +4,7 @@
 
 <!-- {{ request.path }} {{theme_id}} {{theme}} {{theme.id}}   -->
 
-<div>
+<div class="main-container">
 
   {% if user.username %}
   <p>Welcome {{user.username}}</p>
@@ -33,7 +33,7 @@
       </a>
 
       <a href="{% url 'masculine' %}">
-        <button type="submit" class="btn der-color">Der</button>
+        <button type="submit" class="btn der-color m-1">Der</button>
       </a>
       <a href="#"> 
         <button type="submit" class="btn das-color m-1 ">Das</button>
@@ -55,13 +55,25 @@
     </div>
   </div>
 
-  <!-- traduction and plural  -->
+  <!-- traduction and plural  
   <div >
-    <button type="submit" class="btn btn-light m-1">English Traduction</button>
+    <button type="submit" class="btn btn-light ml-1">English Traduction</button>
     <button type="submit" class="btn btn-light m-1">English + Plural</button>
   </div>
 
+-->
+
 <div class="container all-words-display-container">
+
+  <!-- traduction and plural  -->
+    <label class="form-check-label ml-2 mr-5 mb-1">
+      <input type="radio" class="form-check-input" name="optradio">English
+    </label>
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optradio">German plural
+    </label>
+ 
+
   <div class="row">
     {% for noun in nouns %}
       <div class="col-sm die-color border border-dark text-center w-100 p-3 words-container">
