@@ -54,16 +54,8 @@
     </div>
   </div>
 
-  <!-- traduction and plural  
-  <div >
-    <button type="submit" class="btn btn-light ml-1">English Traduction</button>
-    <button type="submit" class="btn btn-light m-1">English + Plural</button>
-  </div>
-
--->
 
 <div class="container all-words-display-container">
-
   <!-- traduction and plural  -->
     <label class="form-check-label ml-2 mr-5 mb-1">
       <input type="checkbox" class="form-check-input" id="english-check-box">English
@@ -74,18 +66,19 @@
  
 
   <div class="row">
-    {% for noun in nouns %}
-      <div class="col-sm die-color border border-dark text-center w-100 p-3 words-container">
-        <p class="german-noun ">{{ noun.german_noun }}</p>
-        <p class="english-noun font-weight-light">{{ noun.english_noun }}</p>
-        <p class="plural-noun font-weight-light">{{ noun.german_plural }}</p>
+      {% for noun in nouns %}
+        <div class="col-sm border border-dark text-center p-3 words-container">
+          <p class="german-noun">{{ noun.german_noun }}</p>
+          <p class="english-noun font-weight-light">{{ noun.english_noun }}</p>
+          <p class="plural-noun font-weight-light">{{ noun.german_plural }}</p>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
       </div>
-      {% if forloop.counter|divisibleby:3 %}
-    </div>
-    <div class="row">
-      {% endif %}
+      <div class="row">
+        {% endif %}
       {% endfor %}
   </div>
+
 </div> 
 
 
