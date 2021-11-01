@@ -20,6 +20,18 @@ h1 {
   background-color: green;
 }
 
+.feminin {
+  background-color: rgba(255, 0, 0, 0.425);
+}
+
+.masculin {
+  background-color: blue;
+  color: white;
+}
+
+.neutral {
+  background-color: green;
+}
 
 button {
   color: aliceblue;
@@ -46,8 +58,7 @@ a {
 }
 
 .die-der-das-buttons a {
-  color: aliceblue;
-  
+  color: aliceblue; 
 }
 
 .die-der-das-buttons a :hover{

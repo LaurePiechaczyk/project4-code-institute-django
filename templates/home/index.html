@@ -1,8 +1,5 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-<!-- {{ request.path }} {{theme_id}} {{theme}} {{theme.id}}   -->
 
 <div class="main-container">
 
@@ -14,29 +11,29 @@
   {% if theme.id %}
   <div class="die-der-das-buttons">
     <a href="{% url 'categorie_feminine' theme.id %}">
-      <button type="submit" class="btn die-color m-1">die</button>
+      <button type="submit" class="btn feminin m-1">die</button>
     </a>
 
     <a href="{% url 'categorie_masculine' theme.id %}">
-      <button type="submit" class="btn der-color m-1">der</button>
+      <button type="submit" class="btn masculin m-1">der</button>
     </a>
 
     <a href="#">
-      <button type="submit" class="btn das-color m-1">das</button>
+      <button type="submit" class="btn neutral m-1">das</button>
     </a>
   </div>
 
   {% else %}
     <div class="die-der-das-buttons">
       <a href="{% url 'feminine' %}">
-        <button type="submit" class="btn die-color m-1">Die</button>
+        <button type="submit" class="btn feminin m-1">Die</button>
       </a>
 
       <a href="{% url 'masculine' %}">
-        <button type="submit" class="btn der-color m-1">Der</button>
+        <button type="submit" class="btn masculin m-1">Der</button>
       </a>
       <a href="#"> 
-        <button type="submit" class="btn das-color m-1 ">Das</button>
+        <button type="submit" class="btn neutral m-1 ">Das</button>
       </a>
     </div>
   {% endif %}
@@ -68,7 +65,8 @@
 
     <div class="row">
       {% for noun in nouns %}
-        <div class="col-sm border border-dark text-center p-3 words-container">
+        <div class="col-sm border border-dark text-center p-3 words-container
+         {% if noun.gender %}{{ noun.gender|lower }}{% endif %}">
           <p class="german-noun">{{ noun.german_noun }}</p>
           <p class="english-noun font-weight-light">{{ noun.english_noun }}</p>
           <p class="plural-noun font-weight-light">{{ noun.german_plural }}</p>

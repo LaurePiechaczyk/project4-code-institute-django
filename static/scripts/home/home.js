@@ -9,6 +9,8 @@ $("#english-check-box").click(function(){
         $(".words-container .english-noun").css("opacity", "0")
 });
 
+
+/*
 // When german is checked --> display german
 $("#plural-check-box").click(function(){
     if($('#plural-check-box').is(":checked"))
@@ -33,11 +35,6 @@ $(document).ready(function() {
     }
  });
 
-
-
-/*
-$("#german-check-box").click(function(){
-    $(".words-container p:nth-child(3)").css("opacity", "1");
-}); */
+ */
 
 
