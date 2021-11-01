@@ -69,16 +69,17 @@ a {
   font-size: 20px;
 }
 
-.words-container p:nth-child(2) {
+.words-container .english-noun {
   font-style:italic;
   position: absolute; 
   color: #6d6b6b;
-  bottom: -5px;
+  bottom: 20px;
   opacity: 0;
 }
-.words-container p:nth-child(3) {
+
+.words-container .plural-noun {
   position: absolute; 
   color: #6d6b6b;
-  bottom: 20px;
+  bottom: -5px;
   opacity: 0;
 }

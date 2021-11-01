@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<script type="module" src="static/scripts/home/home.js"></script>
 
 <!-- {{ request.path }} {{theme_id}} {{theme}} {{theme.id}}   -->
 
@@ -67,10 +66,10 @@
 
   <!-- traduction and plural  -->
     <label class="form-check-label ml-2 mr-5 mb-1">
-      <input type="radio" class="form-check-input" name="optradio">English
+      <input type="checkbox" class="form-check-input" id="english-check-box">English
     </label>
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio">German plural
+      <input type="checkbox" class="form-check-input" id="plural-check-box">German plural
     </label>
  
 
