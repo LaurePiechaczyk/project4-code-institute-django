@@ -57,23 +57,22 @@
 
   <!-- butons die der das -->
   {% if theme.id %}
-                            <div class="die-der-das-buttons">
-                              <a href="{% url 'categorie_feminine' theme.id %}">
-                                <button type="submit" class="btn feminin m-1">die</button>
-                              </a>
+    <div class="diederdas-btn-group">
+      <a href="{% url 'categorie_feminine' theme.id %}">
+        <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
+      </a>
 
-                              <a href="{% url 'categorie_masculine' theme.id %}">
-                                <button type="submit" class="btn masculin m-1">der</button>
-                              </a>
-
-                              <a href="#">
-                                <button type="submit" class="btn neutral m-1">das</button>
-                              </a>
-                            </div>
+      <a href="{% url 'categorie_masculine' theme.id %}">
+        <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
+      </a>
+      <a href="#"> 
+        <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
+      </a>
+    </div>
   {% else %}
     <div class="diederdas-btn-group">
       <a href="{% url 'feminine' %}">
-        <button type="submit" class="btn m-1 diederdas-btn feminin-bg">Die</button>
+        <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
       </a>
 
       <a href="{% url 'masculine' %}">
@@ -87,7 +86,7 @@
 
   <!-- Themes -->
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle mb-3 mt-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{theme}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -100,7 +99,7 @@
 
   <div class="all-words-display-container">
     <!-- traduction and plural  -->
-    <label class="form-check-label ml-2 mr-5 mb-1">
+    <label class="form-check-label ml-4 mr-5 mb-1">
       <input type="checkbox" class="form-check-input" id="english-check-box">English
     </label>
     <label class="form-check-label">
@@ -108,7 +107,7 @@
     </label>
   
     <!-- traduction and plural  -->
-    <div class="row">
+    <div class="row ml-1">
       {% for noun in nouns %}
         <div class="col-sm border border-dark text-center p-3 words-container
         {% if noun.gender %}{{ noun.gender|lower }}-bg {% endif %}">
@@ -118,7 +117,7 @@
         </div>
         {% if forloop.counter|divisibleby:3 %}
       </div>
-      <div class="row">
+      <div class="row ml-1">
         {% endif %}
       {% endfor %}
     </div>

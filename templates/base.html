@@ -36,9 +36,6 @@
         <li class="nav-item active">
             <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-        </li>
 
         {% if user.is_authenticated %}
         <li class="nav-item">
@@ -57,7 +54,7 @@
         {% endif %}
 
         </ul>
-        <span class="navbar-text">
+        <span class="navbar-text text-white">
         Designed to learn with colors
         </span>
     </div>
@@ -67,7 +64,7 @@
 <!-- Content Goes here -->
 {% endblock content %}
 
-<footer class="footer mt-auto py-4 bg-light">
+<footer class="footer mt-auto py-4 bg-dark">
     <p class="m-0 text-center">Made by Elk</p>
     <p class="m-0 text-center">Follow us: </p>
 </footer>

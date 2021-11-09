@@ -1,7 +1,41 @@
-//console.log("fffffffffff")
+// ------------ ANIMATION HERO
+TweenLite.set('.under-title',{x:'-100%'})
+TweenLite.set('.hero-btn', {opacity:0})
+
+const TL = gsap.timeline();
+
+TL
+//.to('.main-title', {x:0, duration:2})
+.to('.under-title', {x:0, duration:1},)
+.to('.hero-btn', {opacity:1})
+
+//------------ Main title
+var randomColor;
+
+$(".main-title").hover(function(){
+    getColor();
+    gsap.to('.main-title-animation', {
+        text:"LEARN using", 
+        color:randomColor, 
+        duration:1,
+    });
+  },
+   function(){
+    getColor();
+    gsap.to('.main-title-animation', {
+        text:"GERMAN in", 
+        color:randomColor, 
+        duration:1,
+    });
+});
+
+function  getColor() {
+    var colors = ['#a8c3ed','#f0b6db','#b6e5f0','#f0deb6','#cef5ea', 'white','#c23d51','#4280c2','#4abf92'];
+    randomColor = colors[Math.floor(Math.random()*colors.length)];
+}
+
 
 //-------------- colors picker
-
 const femininColorPicker = document.getElementById('feminin-color-picker');
 const masculinColorPicker = document.getElementById('masculin-color-picker');
 const neutralColorPicker = document.getElementById('neutral-color-picker');
@@ -77,42 +111,7 @@ neutralColorPicker.addEventListener('change', function(){
     localStorage.setItem('neutralBackground',neutralBackground);
 });
 
-
-// ------------ ANIMATION HERO
-TweenLite.set('.under-title',{x:'-100%'})
-TweenLite.set('.hero-btn', {opacity:0})
-
-const TL = gsap.timeline();
-
-TL
-//.to('.main-title', {x:0, duration:2})
-.to('.under-title', {x:0, duration:1},)
-.to('.hero-btn', {opacity:1})
-
-//------------ Main title
-var randomColor;
-
-$(".main-title").hover(function(){
-    getColor();
-    gsap.to('.main-title-animation', {
-        text:"LEARN using", 
-        color:randomColor, 
-        duration:1,
-    });
-  },
-   function(){
-    getColor();
-    gsap.to('.main-title-animation', {
-        text:"GERMAN in", 
-        color:randomColor, 
-        duration:1,
-    });
-});
-
-function  getColor() {
-    var colors = ['#a8c3ed','#f0b6db','#b6e5f0','#f0deb6','#cef5ea', 'white',];
-    randomColor = colors[Math.floor(Math.random()*colors.length)];
-}
+//------------ English plural versions
 
 
 // When english is checked --> display english
