@@ -1,72 +1,115 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="main-container">
 
-  {% if user.username %}
-  <p>Welcome {{user.username}}</p>
-  {% endif %}
+<!-- ----------------HERO SECTION -->
+<div class= 'container'>
+
+<div class="jumbotron">
+  <h1 class="display-4 main-title"> <span class="main-title-animation">GERMAN with</span> COLORS</h1>
+  <p class="lead under-title">Learn German NOUNS by associating colors to the GENDERS</p>
+  <hr class="my-4 bg-dark">
+  <p class="lead">
+    <a class="btn-info btn hero-btn" href="#" role="button">How it works</a>
+    <a class="btn-info btn hero-btn" href="#" role="button">Start learning</a>
+  </p>
+</div>
+
+</div>
+
+<!-- ----------------HOW IT WORKS SECTION -->
+<div class= 'container'>
+  <h2 class='font-weight-light'>HOW IT WORKS</h2>
+  <h3 class="font-weight-light">German nouns and genders</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+  <h3 class="font-weight-light">Associating GermLan Gender with colors</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+  </p>
+  <h3 class="font-weight-light">Example</h3>
+
+  <h3 class="font-weight-light">Website customisation</h3>
+  <p>LOGIN --> use your own list of words</p>
+  <p>Choose the colors</p>
+    <div>
+      Pick a color for Feminine Nouns
+    <input type="color" name="feminineColorPicker" id="feminin-color-picker"/>
+    </div>
+    <div>
+      Pick a color for Masculin Nouns
+    <input type="color" name="masculinColorPicker" id="masculin-color-picker"/>
+    </div>
+    <div>
+      Pick a color for Neutral Nouns
+    <input type="color" name="neutralColorPicker" id="neutral-color-picker"/>
+    </div>
+  <hr class="my-4 bg-white">
+</div>
+
+<div class="container pb-5">
+  <h2 class='font-weight-light'>START LEARNING</h2>
 
   <!-- butons die der das -->
   {% if theme.id %}
-  <div class="die-der-das-buttons">
-    <a href="{% url 'categorie_feminine' theme.id %}">
-      <button type="submit" class="btn feminin m-1">die</button>
-    </a>
+                            <div class="die-der-das-buttons">
+                              <a href="{% url 'categorie_feminine' theme.id %}">
+                                <button type="submit" class="btn feminin m-1">die</button>
+                              </a>
 
-    <a href="{% url 'categorie_masculine' theme.id %}">
-      <button type="submit" class="btn masculin m-1">der</button>
-    </a>
+                              <a href="{% url 'categorie_masculine' theme.id %}">
+                                <button type="submit" class="btn masculin m-1">der</button>
+                              </a>
 
-    <a href="#">
-      <button type="submit" class="btn neutral m-1">das</button>
-    </a>
-  </div>
-
+                              <a href="#">
+                                <button type="submit" class="btn neutral m-1">das</button>
+                              </a>
+                            </div>
   {% else %}
-    <div class="die-der-das-buttons">
+    <div class="diederdas-btn-group">
       <a href="{% url 'feminine' %}">
-        <button type="submit" class="btn feminin m-1">Die</button>
+        <button type="submit" class="btn m-1 diederdas-btn feminin-bg">Die</button>
       </a>
 
       <a href="{% url 'masculine' %}">
-        <button type="submit" class="btn masculin m-1">Der</button>
+        <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
       </a>
       <a href="#"> 
-        <button type="submit" class="btn neutral m-1 ">Das</button>
+        <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
       </a>
     </div>
   {% endif %}
 
   <!-- Themes -->
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{theme}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="{% url 'home' %}">No theme</a>
       {% for category in categories %}
       <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
-
       {% endfor %}
     </div>
   </div>
 
-
-<div class="container all-words-display-container">
-  <!-- traduction and plural  -->
+  <div class="all-words-display-container">
+    <!-- traduction and plural  -->
     <label class="form-check-label ml-2 mr-5 mb-1">
       <input type="checkbox" class="form-check-input" id="english-check-box">English
     </label>
     <label class="form-check-label">
       <input type="checkbox" class="form-check-input" id="plural-check-box">German plural
     </label>
- 
-
+  
+    <!-- traduction and plural  -->
     <div class="row">
       {% for noun in nouns %}
         <div class="col-sm border border-dark text-center p-3 words-container
-         {% if noun.gender %}{{ noun.gender|lower }}{% endif %}">
+        {% if noun.gender %}{{ noun.gender|lower }}-bg {% endif %}">
           <p class="german-noun">{{ noun.german_noun }}</p>
           <p class="english-noun font-weight-light">{{ noun.english_noun }}</p>
           <p class="plural-noun font-weight-light">{{ noun.german_plural }}</p>
@@ -76,10 +119,18 @@
       <div class="row">
         {% endif %}
       {% endfor %}
-  </div>
+    </div>
 
-</div> 
+  </div> 
 
 
-</div> 
+</div>
+
+
+<!--  
+{% if user.username %}
+<p>Welcome {{user.username}}</p>
+{% endif %}
+-->
+
 {% endblock %}

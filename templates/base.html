@@ -21,10 +21,12 @@
 
     <title>Project4</title>
 </head>
-<body>
+<body class="bg-dark">
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div class= 'container'>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,7 +62,7 @@
         </span>
     </div>
 </nav>
-  
+</div> 
 {% block content %}
 <!-- Content Goes here -->
 {% endblock content %}
@@ -70,7 +72,8 @@
     <p class="m-0 text-center">Follow us: </p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
 <script type="module" src="{% static 'scripts/home/home.js' %}"></script>
 
 </body>
