@@ -5,7 +5,6 @@ if (alerted != 'yes') {
  localStorage.setItem('alerted','yes');
 }
 
-
 // ------------ ANIMATION HERO
 TweenLite.set('.under-title',{x:'-100%'})
 TweenLite.set('.hero-btn', {opacity:0})
@@ -52,47 +51,18 @@ var femininBackground;
 var masculinBackground;
 var neutralBackground;
 
-// default bg value
-function defaultColors(){
-    femininBackground = '#c23d51';
-    masculinBackground = '#4280c2';
-    neutralBackground = '#4abf92'; 
-}
-defaultColors()
 
-// get local stored bg value (if no stored the default will be used)
-femininBackground = localStorage.getItem('femininBackground');
-masculinBackground = localStorage.getItem('masculinBackground');
-neutralBackground = localStorage.getItem('neutralBackground');   
-
-// reset default when button is clicked
-function resetColors(){
-    defaultColors();
-    displayColorsInHtml()
-    localStorage.setItem('femininBackground',femininBackground);
-    localStorage.setItem('masculinBackground',masculinBackground);
-    localStorage.setItem('neutralBackground',neutralBackground);
+var LocalStorageColors= localStorage.getItem('LocalStorageColors') || '';
+if (LocalStorageColors != 'yes') {
+    resetColors();
+ localStorage.setItem('LocalStorageColors','yes');
 }
+
+getLocalStorageColors();
+displayColorsInHtml();
+
+// allow user to reset to the default colors
 document.querySelector(".reset-colors").addEventListener("click", resetColors);
-
-// display the bg to all elements with the class + the color picker
-function displayColorsInHtml(){
-    document.querySelectorAll('.feminin-bg').forEach(function(femininElement) {
-        femininElement.style.backgroundColor = femininBackground;
-    });
-    femininColorPicker.value = femininBackground;
-
-    document.querySelectorAll('.masculin-bg').forEach(function(masculinElement) {
-        masculinElement.style.backgroundColor = masculinBackground;
-    });
-    masculinColorPicker.value = masculinBackground;
-
-    document.querySelectorAll('.neutral-bg').forEach(function(neutralElement) {
-        neutralElement.style.backgroundColor = neutralBackground;
-    });
-    neutralColorPicker.value = neutralBackground;
-}
-displayColorsInHtml()
 
 // allow the user to choose color and save it in local storage 
 femininColorPicker.addEventListener('change', function(){
@@ -119,8 +89,49 @@ neutralColorPicker.addEventListener('change', function(){
     localStorage.setItem('neutralBackground',neutralBackground);
 });
 
-//------------ English plural versions
 
+// default bg value
+function defaultColors(){
+    femininBackground = '#c23d51';
+    masculinBackground = '#4280c2';
+    neutralBackground = '#4abf92'; 
+}
+
+// get local stored bg value (if no stored the default will be used)
+function getLocalStorageColors(){
+    femininBackground = localStorage.getItem('femininBackground');
+    masculinBackground = localStorage.getItem('masculinBackground');
+    neutralBackground = localStorage.getItem('neutralBackground');      
+}
+
+// reset default when button is clicked
+function resetColors(){
+    defaultColors();
+    displayColorsInHtml()
+    localStorage.setItem('femininBackground',femininBackground);
+    localStorage.setItem('masculinBackground',masculinBackground);
+    localStorage.setItem('neutralBackground',neutralBackground);
+}
+
+// display the bg to all elements with the class + the color picker
+function displayColorsInHtml(){
+    document.querySelectorAll('.feminin-bg').forEach(function(femininElement) {
+        femininElement.style.backgroundColor = femininBackground;
+    });
+    femininColorPicker.value = femininBackground;
+
+    document.querySelectorAll('.masculin-bg').forEach(function(masculinElement) {
+        masculinElement.style.backgroundColor = masculinBackground;
+    });
+    masculinColorPicker.value = masculinBackground;
+
+    document.querySelectorAll('.neutral-bg').forEach(function(neutralElement) {
+        neutralElement.style.backgroundColor = neutralBackground;
+    });
+    neutralColorPicker.value = neutralBackground;
+}
+
+//------------ English plural versions
 
 // When english is checked --> display english
 $("#english-check-box").click(function(){
