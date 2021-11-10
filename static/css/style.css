@@ -8,11 +8,6 @@ body {
   border:0;
 }
 
-.jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)) , url(../images/colour.jpg) no-repeat center / cover;
-  color: white;
-}
-
 button {
   color: white;
   text-decoration: none;
@@ -27,12 +22,19 @@ a {
 }
 
 /* ------------ HOME */
+.jumbotron {
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
+   url(../images/colour.jpg) no-repeat center / cover;
+  color: white;
+  padding-top : 150px;
+}
+
 .diederdas-btn-group, .dropdown {
   display: flex;
   padding-bottom: 3px;
 }
 
-.diederdas-btn:hover {
+.diederdas-btn:hover, .nav-link:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0 0);
 }
 
