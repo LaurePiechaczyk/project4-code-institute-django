@@ -70,3 +70,6 @@ a {
 }
 
 /* ------------ DASHBOARD */
+.dashboard-title {
+  padding-top : 80px;
+}
