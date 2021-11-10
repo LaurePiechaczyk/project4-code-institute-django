@@ -10,15 +10,15 @@
   <p class="lead under-title">Learn German NOUNS by associating colors to the GENDERS</p>
   <hr class="my-4 bg-dark">
   <p class="lead">
-    <a class="btn-info btn hero-btn" href="#" role="button">How it works</a>
-    <a class="btn-info btn hero-btn" href="#" role="button">Start learning</a>
+    <a class="btn-info btn hero-btn" href="#how" role="button">How it works</a>
+    <a class="btn-info btn hero-btn" href="#learning" role="button">Start learning</a>
   </p>
 </div>
 
 </div>
 
 <!-- ----------------HOW IT WORKS SECTION -->
-<div class= 'container'>
+<div class= 'container' id='how'>
   <h2 class='font-weight-light'>HOW IT WORKS</h2>
   <h3 class="font-weight-light">German nouns and genders</h3>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -52,33 +52,52 @@
   <hr class="my-4 bg-white">
 </div>
 
-<div class="container pb-5">
+
+ <!-- --------------------PART START LEARNING -->
+<div class="container" id="learning">
   <h2 class='font-weight-light'>START LEARNING</h2>
 
-  <!-- butons die der das -->
-  {% if theme.id %}
+  {% if user.is_authenticated %}
+    <p>Use the default NOUNS or your owned NOUNS</p>
+    <div>Your NOUNS</div>
     <div class="diederdas-btn-group">
-      <a href="{% url 'categorie_feminine' theme.id %}">
+      <a href="{% url 'feminine_user' %}#learning">
         <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
       </a>
-
-      <a href="{% url 'categorie_masculine' theme.id %}">
+      <a href="{% url 'masculine_user' %}#learning">
         <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
       </a>
-      <a href="#"> 
+      <a href="{% url 'neutral_user' %}#learning"> 
+        <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
+      </a>
+    </div>
+  {% else %}
+   <p>Here you will use the default NOUNS. You can login/register to use your own NOUNS</p>
+  {% endif %}
+
+  <!-- butons die der das -->
+  <div class="mt-3">Default NOUNS</div>
+  {% if theme.id %}
+    <div class="diederdas-btn-group">
+      <a href="{% url 'categorie_feminine' theme.id %}#learning">
+        <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
+      </a>
+      <a href="{% url 'categorie_masculine' theme.id %}#learning">
+        <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
+      </a>
+      <a href="{% url 'categorie_neutral' theme.id %}#learning"> 
         <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
       </a>
     </div>
   {% else %}
     <div class="diederdas-btn-group">
-      <a href="{% url 'feminine' %}">
+      <a href="{% url 'feminine' %}#learning">
         <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
       </a>
-
-      <a href="{% url 'masculine' %}">
+      <a href="{% url 'masculine' %}#learning">
         <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
       </a>
-      <a href="#"> 
+      <a href="{% url 'neutral' %}#learning"> 
         <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
       </a>
     </div>
@@ -90,9 +109,9 @@
       {{theme}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="{% url 'home' %}">No theme</a>
+      <a class="dropdown-item" href="{% url 'home' %}#learning">No theme</a>
       {% for category in categories %}
-      <a class="dropdown-item" href="{% url 'go_to_category' category.id %}">{{category}}</a>
+      <a class="dropdown-item" href="{% url 'go_to_category' category.id %}#learning">{{category}}</a>
       {% endfor %}
     </div>
   </div>
@@ -123,8 +142,6 @@
     </div>
 
   </div> 
-
-
 </div>
 
 
