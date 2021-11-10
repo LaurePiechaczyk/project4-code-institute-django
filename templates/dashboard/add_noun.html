@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <h1>Add noun template</h1>
+  <form method="POST" action="add_noun">
+      {% csrf_token %}
+      {{ form.as_p}}
+      <div>  
+        <button class="btn btn-info btn-sm mb-2" type="submit">Add Noun</button>  
+      </div>
+  </form>  
+  <a href="{% url 'dashboard' %}">
+    <button class="btn btn-info btn-sm mt-2">Return to Dashboard</button>  
+  </a> 
+</div>
+
+{%endblock%}

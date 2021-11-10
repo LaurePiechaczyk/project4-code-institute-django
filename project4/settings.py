@@ -52,9 +52,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'crispy_forms',
-    #'blog',
     'home',
-    #'dashboard',
+    'dashboard',
 ]
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True

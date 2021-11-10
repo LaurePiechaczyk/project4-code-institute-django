@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<h1 class='font-weight-light mb-1'>Hello {{user.username}}. Welcome to your Dashboard</h1>
+<h2 class='mb-3'>Here you can add/edit nouns ...</h2>
+</div>
+<div class="container text-dark">
+    <div id="accordion">
+        <!-- Part for adding/editing/deleting TODO Items -->
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                <h3 class='font-weight-light text-dark'>Your ToDo list</h3>
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse {{show_todo}}" data-parent="#accordion">
+                <div class="card-body">
+                  <a href="{% url 'add_todo_item' %}">
+                    <button class="btn btn-info btn-sm mb-2" >Add an Item</button>
+                  </a>  
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">your ToDo Items</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in owned_items%}
+                      <tr>
+                        {% if item.done %}
+                        <td><strike>{{item.name}}</strike></td>
+                        {% else %}
+                        <td>{{item.name}}</td>
+                        {% endif %}
+                        <td>
+                          <a href="{% url 'edit_todo_item' item.id %}">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                          </a>
+                          <a href="{% url 'toggle_todo_item' item.id %}">
+                            <button class="btn btn-primary btn-sm">Toggle</button>
+                          </a>
+                          <a href="{% url 'delete_todo_item' item.id %}">
+                            <button class="btn btn-primary btn-sm">Delete</button>
+                          </a>
+                        </td>
+                    </tr>
+                {% empty %}
+                <tr><td>You have nothing to do.</td></tr>
+                    {% endfor %}  
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+          <!-- Part for adding/editing/deleting nouns -->
+          <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                  <h3 class='font-weight-light text-dark'>Your Nouns</h3>
+                </a>
+              </div>
+              <div id="collapseTwo" class="collapse {{show_nouns}}" data-parent="#accordion">
+                <div class="card-body">
+                  <p>
+                    <a href="{% url 'add_noun' %}">
+                      <button class="btn btn-info btn-sm mt-2" >Add an Noun</button>
+                    </a>  
+                  </p>
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">Gender</th>
+                        <th scope="col">German</th>
+                        <th scope="col">English</th>
+                        <th scope="col">Plural</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for owned_noun in owned_nouns %}  
+                      <tr>
+                        <td>{{ owned_noun.gender }}</td>
+                        <td>{{ owned_noun.german_noun }}</td>
+                        <td>{{ owned_noun.english_noun}}</td>
+                        <td>{{ owned_noun.german_plural }}</td>
+                        <td> 
+                          <a href="{% url 'edit_noun' owned_noun.id %}">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                          </a>
+                          <a href="{% url 'delete_noun' owned_noun.id %}">
+                            <button class="btn btn-primary btn-sm">Delete</button>
+                          </a>
+                        </td>
+                      </tr>
+                    {% endfor %}  
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Part for settings -->
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  <h3 class='font-weight-light text-dark'>Your settings (color / number of words to display)</h3>
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  NOT YET AVAILABLE
+                </div>
+              </div>
+            </div>
+    </div>
+</div>
+
+
+{%endblock%}
