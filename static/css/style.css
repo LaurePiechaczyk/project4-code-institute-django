@@ -13,8 +13,16 @@ button {
   text-decoration: none;
 }
 
+footer {
+  height: 130px;
+}
+
 .btn {
   text-decoration: none;
+}
+
+.text-white:hover {
+  color: rgb(168, 167, 167) !important;
 }
 
 a {

@@ -24,49 +24,46 @@
 <body class="bg-blue">
 
 <!-- Navigation -->
-<div class= ''>
+<nav class="navbar navbar-expand-sm navbar-dark tissu-bg fixed-top">
+    <a class="navbar-brand" href="{% url 'home' %}">DieDerDas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark tissu-bg">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse container" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
 
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'dashboard' %}">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
-            </li>
-            {% endif %}
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'dashboard' %}">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
+        </li>
+        {% endif %}
+      </ul>
 
-            </ul>
-            <span class="navbar-text text-white">
-            Designed to learn with colors
-            </span>
-        </div>
-    </nav>
-</div> 
+    </div>
+  </nav>
+
 {% block content %}
 <!-- Content Goes here -->
 {% endblock content %}
 
-<footer class="footer mt-auto py-4 bg-dark">
-    <p class="m-0 text-center"></p>
-    <p class="m-0 text-center"> </p>
+<footer class="footer  py-4 mt-5 tissu-bg text-white">
+    <p class="m-0 text-center">Designed to learn with colors</p>
+    
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>

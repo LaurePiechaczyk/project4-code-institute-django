@@ -138,9 +138,9 @@ neutralColorPicker.addEventListener('change', function(){
 
 // default bg value
 function defaultColors(){
-    femininBackground = '#c23d51';
-    masculinBackground = '#4280c2';
-    neutralBackground = '#4abf92'; 
+    femininBackground = '#AD0935';
+    masculinBackground = '#075493';
+    neutralBackground = '#0A867B'; 
 }
 
 // get local stored bg value (if no stored the default will be used)
