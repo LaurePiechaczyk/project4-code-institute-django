@@ -24,38 +24,39 @@
 <body class="bg-blue">
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-dark tissu-bg fixed-top">
-    <a class="navbar-brand" href="{% url 'home' %}">DieDerDas</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        </li>
+    <nav class="navbar navbar-expand-sm navbar-dark tissu-bg fixed-top">
+        <a class="navbar-brand" href="{% url 'home' %}">DieDerDas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{% url 'dashboard' %}">Dashboard</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
-        </li>
-        {% endif %}
-      </ul>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
 
-    </div>
-  </nav>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'dashboard' %}">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            {% endif %}
+        </ul>
+
+        </div>
+    </nav>
 
 {% block content %}
 <!-- Content Goes here -->

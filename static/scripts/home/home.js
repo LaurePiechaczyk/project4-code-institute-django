@@ -36,17 +36,17 @@ const tlFeminin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
 // example change words
 tlFeminin
 .to('.feminin-example', {
-    text:"yyyyy", 
+    text:"Stimme", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.feminin-example', {
-    text:"ttttt", 
+    text:"Welt", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.feminin-example', {
-    text:"hhhhh", 
+    text:"Stadt", 
     duration:1,
     delay:delayNounsChange,
 })
@@ -54,17 +54,17 @@ tlFeminin
 const tlMasculin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
 tlMasculin
 .to('.masculin-example', {
-    text:"yyyyy", 
+    text:"Name", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.masculin-example', {
-    text:"ttttt", 
+    text:"Mund", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.masculin-example', {
-    text:"hhhhh", 
+    text:"Monat", 
     duration:1,
     delay:delayNounsChange,
 })
@@ -72,17 +72,17 @@ tlMasculin
 const tlNeuter = new TimelineMax({ repeat: -1, repeatDelay: 1 })
 tlNeuter
 .to('.neuter-example', {
-    text:"yyyyy", 
+    text:"Gesicht", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.neuter-example', {
-    text:"ttttt", 
+    text:"Wasser", 
     duration:1,
     delay:delayNounsChange,
 })
 .to('.neuter-example', {
-    text:"hhhhh", 
+    text:"Bett", 
     duration:1,
     delay:delayNounsChange,
 })
