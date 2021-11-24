@@ -1,5 +1,11 @@
 body {
   color: white;   
+  
+
+}
+
+.before-footer {
+  min-height: calc(100vh - 150px);
 }
 
 *{
@@ -14,7 +20,8 @@ button {
 }
 
 footer {
-  height: 130px;
+  min-height: 130px;
+
 }
 
 .btn {
@@ -42,6 +49,11 @@ a {
   background-color: #5F1C29;
   color: white;
 }
+.bordeaux-btn:hover {
+  background-color: #7c2638;
+  color: white;
+}
+
 
 .tissu-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
