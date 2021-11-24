@@ -15,7 +15,7 @@
             <div id="collapseOne" class="collapse {{show_todo}}" data-parent="#accordion">
                 <div class="card-body">
                   <a href="{% url 'add_todo_item' %}">
-                    <button class="btn btn-info btn-sm mb-2" >Add an Item</button>
+                    <button class="orange-btn btn pb-1 btn-sm" >Add an Item</button>
                   </a>  
                   <table class="table table-sm">
                     <thead>
@@ -33,14 +33,14 @@
                         <td>{{item.name}}</td>
                         {% endif %}
                         <td>
-                          <a href="{% url 'edit_todo_item' item.id %}">
-                            <button class="btn btn-primary btn-sm">Edit</button>
+                          <a class="btn grey-btn btn-sm" href="{% url 'edit_todo_item' item.id %}">
+                            Edit
                           </a>
-                          <a href="{% url 'toggle_todo_item' item.id %}">
-                            <button class="btn btn-primary btn-sm">Toggle</button>
+                          <a class="btn grey-btn btn-sm" href="{% url 'toggle_todo_item' item.id %}">
+                             Toggle
                           </a>
-                          <a href="{% url 'delete_todo_item' item.id %}">
-                            <button class="btn btn-primary btn-sm">Delete</button>
+                          <a class="btn grey-btn btn-sm" href="{% url 'delete_todo_item' item.id %}">
+                             Delete
                           </a>
                         </td>
                     </tr>
@@ -63,7 +63,7 @@
                 <div class="card-body">
                   <p>
                     <a href="{% url 'add_noun' %}">
-                      <button class="btn btn-info btn-sm mt-2" >Add an Noun</button>
+                      <button class="orange-btn btn pb-1 btn-sm mt-2" >Add an Noun</button>
                     </a>  
                   </p>
                   <table class="table table-sm">
@@ -85,10 +85,10 @@
                         <td>{{ owned_noun.german_plural }}</td>
                         <td> 
                           <a href="{% url 'edit_noun' owned_noun.id %}">
-                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn grey-btn btn-sm">Edit</button>
                           </a>
                           <a href="{% url 'delete_noun' owned_noun.id %}">
-                            <button class="btn btn-primary btn-sm">Delete</button>
+                            <button class="btn grey-btn btn-sm">Delete</button>
                           </a>
                         </td>
                       </tr>

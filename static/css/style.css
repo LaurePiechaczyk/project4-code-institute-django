@@ -1,7 +1,5 @@
 body {
-  color: white;   
-  
-
+  color: white; 
 }
 
 .before-footer {
@@ -21,7 +19,6 @@ button {
 
 footer {
   min-height: 130px;
-
 }
 
 .btn {
@@ -34,6 +31,20 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+/* from https://stackoverflow.com/questions/11167281/webkit-css-to-control-the-box-around-the-color-in-an-inputtype-color */
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 40px;
+	height: 20px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0px;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
 }
 
 .orange-btn {
@@ -54,6 +65,10 @@ a {
   color: white;
 }
 
+.grey-btn {
+  background-color: rgb(163, 163, 163);
+  color: black;
+}
 
 .tissu-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
@@ -71,8 +86,6 @@ a {
   color: white;
   padding-top : 150px;
   padding-bottom : 100px;
-  
-
 }
 
 .main-title {
@@ -80,6 +93,7 @@ a {
   width: 50%; 
   grid-template-columns: 1fr 1fr; 
 }
+
 .main-title-animation {
   width: 350px;
 }
@@ -138,4 +152,12 @@ a {
 /* ------------ DASHBOARD */
 .dashboard-title {
   padding-top : 80px;
+}
+
+
+/* small screens */
+@media (max-width: 768px) {
+  .main-title {
+    display: block; 
+  }
 }
