@@ -3,41 +3,71 @@
 
 
 <!-- ----------------HERO SECTION -->
-<div class= 'container'>
+<div class= ''>
 
 <div class="jumbotron">
-  <h1 class="display-4 main-title"> <span class="main-title-animation">GERMAN with</span> COLORS</h1>
-  <h2 class="font-weight-light">DieDerDas game</h2>
-  <p class="lead under-title">Learn German NOUNS by associating colors to the GENDERS</p>
-  <hr class="my-4 bg-dark">
-  <p class="lead">
-    <a class="btn-info btn hero-btn" href="#how" role="button">How it works</a>
-    <a class="btn-info btn hero-btn" href="#learning" role="button">Start learning</a>
-  </p>
-</div>
 
+  <div class="container">
+
+    <h1 class="display-4 main-title ">
+      <div class="main-title-animation">GERMAN with</div>
+      <div class=" text-color">COLORS</div> 
+    </h1>
+
+    <h2 class="font-weight-light">DieDerDas game</h2>
+    <p class="lead under-title">Learn German NOUNS by associating colors to the GENDERS</p>
+    <hr class="my-4 bg-dark">
+    <p class="lead">
+      <a class="btn orange-btn " href="#how" role="button">How it works</a>
+      <a class="btn orange-btn " href="#learning" role="button">Start learning</a>
+    </p>
+  </div>
+  
 </div>
 
 <!-- ----------------HOW IT WORKS SECTION -->
 <div class= 'container' id='how'>
+  <div class="brain-img-container">
+    <img class="brain-color-img" src="static/images/brain-color.png" alt="">   
+  </div>
+
   <h2 class='font-weight-light'>HOW IT WORKS</h2>
-  <h3 class="font-weight-light">German nouns and genders</h3>
+  <h3 class="font-weight-light">&#x2022 German nouns and genders</h3>
   <p>
     In German, nouns are associated with one of three genders: masculine, feminine or neuter. <br>
-    How do you know which gender is associated with a noun? <br>
-    This websibe offers to use colors as a tool. 
+    How do we learn which gender is associated with a noun? <br>
+    
   </p>
-  <h3 class="font-weight-light">Example</h3>
-  <p>
+  <h3 class="font-weight-light">&#x2022 Why not with colors?</h3>
+
+
+  <div class="row">
+      <div class="col-xs-6 col-sm-4 border border-dark text-center feminin-bg pt-3 sm-mr-3">
+        <p class="">FEMININ NOUNS</p>
+        <p>Die <span class="feminin-example">jjjjjj</span> </p>
+      </div>
+      <div class="col-xs-6 col-sm-4 border border-dark text-center masculin-bg pt-3 sm-mr-3">
+        <p class="">MASCULIN NOUNS</p>
+        <p class="">Der <span class="masculin-example">jjjjjj</span> </p>
+      </div>
+      <div class="col-xs-6 col-sm-4 border border-dark text-center neutral-bg pt-3">
+        <p class="">NEUTER NOUNS</p>
+        <p class="">Das <span class="neuter-example">jjjjjj</span></p>
+      </div>
+
+  </div>
+
+
+  <p class="pt-2">
     For example, one can associate German nouns to a color depending on the gender. <br>
-    Feminine = Red; Masculine = Blue; Neuter = Green. <br>
-    Do you want to try?  <br>
-    You can also choose your colors.
+ 
+    Do you want to try? 
+    <a class="btn orange-btn pt-1 pb-2" href="#learning" role="button">Start learning</a> 
+    <br> <br>
+    You can also choose your colors <span class="font-weight-bold">&#x2193</span> 
   </p>
 
-  <h3 class="font-weight-light">Website customization</h3>
-  <p>If you register, you will be able to use your own nouns</p>
-  <p>Choose the colors:</p>
+  <h3 class="font-weight-light">&#x2022 Website customization</h3>
     <div>
       Pick a color for Feminine Nouns
     <input type="color" name="feminineColorPicker" id="feminin-color-picker"/>
@@ -75,7 +105,10 @@
       </a>
     </div>
   {% else %}
-   <p>Here you will use the default NOUNS. You can login/register to use your own NOUNS</p>
+   <p>Here you will use the default NOUNS. 
+    If you register, you will be able to use your own nouns
+    <a class="btn orange-btn pt-1 pb-2" href="{% url 'account_signup' %}" role="button">Register</a> 
+  </p>
   {% endif %}
 
   <!-- butons die der das -->

@@ -21,12 +21,56 @@ a {
   text-decoration: none;
 }
 
+.orange-btn {
+  background-color: #e75e2cc9;
+  color: white;
+}
+.orange-btn:hover {
+  background-color: #5f1c29c9;
+  color: white;
+}
+
+.bordeaux-btn {
+  background-color: #5F1C29;
+  color: white;
+}
+
+.tissu-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+  url(../images/fabric-color.jpg) no-repeat center / cover;
+}
+
+.bg-blue {
+  background-color: #06546b;
+}
+
 /* ------------ HOME */
 .jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
-   url(../images/colour.jpg) no-repeat center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),
+   url(../images/fabric-color.jpg) no-repeat center / cover;
   color: white;
   padding-top : 150px;
+
+}
+
+.main-title {
+  display: grid; 
+  width: 50%; 
+  grid-template-columns: 1fr 1fr; 
+}
+.main-title-animation {
+  width: 350px;
+}
+
+.brain-img-container {
+  height: 40px;
+  position: relative;
+}
+.brain-color-img {
+  width: 140px;
+  position: absolute;
+  left: -40px;
+  top: -40px;
 }
 
 .diederdas-btn-group, .dropdown {

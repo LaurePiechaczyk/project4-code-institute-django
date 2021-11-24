@@ -5,18 +5,8 @@ if (alerted != 'yes') {
  localStorage.setItem('alerted','yes');
 }
 
-// ------------ ANIMATION HERO
-TweenLite.set('.under-title',{x:'-100%'})
-TweenLite.set('.hero-btn', {opacity:0})
-
-const TL = gsap.timeline();
-
-TL
-//.to('.main-title', {x:0, duration:2})
-.to('.under-title', {x:0, duration:1},)
-.to('.hero-btn', {opacity:1})
-
-//------------ Main title
+// ------------ ANIMATION Index page
+// Main title
 var randomColor;
 
 $(".main-title").hover(function(){
@@ -30,7 +20,7 @@ $(".main-title").hover(function(){
    function(){
     getColor();
     gsap.to('.main-title-animation', {
-        text:"GERMAN in", 
+        text:"GERMAN with", 
         color:randomColor, 
         duration:1,
     });
@@ -40,6 +30,62 @@ function  getColor() {
     var colors = ['#a8c3ed','#f0b6db','#b6e5f0','#f0deb6','#cef5ea', 'white','#c23d51','#4280c2','#4abf92'];
     randomColor = colors[Math.floor(Math.random()*colors.length)];
 }
+
+let delayNounsChange = 8
+const tlFeminin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
+// example change words
+tlFeminin
+.to('.feminin-example', {
+    text:"yyyyy", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.feminin-example', {
+    text:"ttttt", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.feminin-example', {
+    text:"hhhhh", 
+    duration:1,
+    delay:delayNounsChange,
+})
+
+const tlMasculin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
+tlMasculin
+.to('.masculin-example', {
+    text:"yyyyy", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.masculin-example', {
+    text:"ttttt", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.masculin-example', {
+    text:"hhhhh", 
+    duration:1,
+    delay:delayNounsChange,
+})
+
+const tlNeuter = new TimelineMax({ repeat: -1, repeatDelay: 1 })
+tlNeuter
+.to('.neuter-example', {
+    text:"yyyyy", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.neuter-example', {
+    text:"ttttt", 
+    duration:1,
+    delay:delayNounsChange,
+})
+.to('.neuter-example', {
+    text:"hhhhh", 
+    duration:1,
+    delay:delayNounsChange,
+})
 
 
 //-------------- colors picker
