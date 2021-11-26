@@ -81,7 +81,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .tissu-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
-  url(../images/fabric-color.jpg) no-repeat center / cover;
+  url(https://res.cloudinary.com/dwccjr3n4/image/upload/v1637787482/static/images/fabric-color.59ce5bbd2f9f.jpg) no-repeat center / cover;
 }
 
 .bg-blue {
@@ -91,7 +91,7 @@ input[type="color"]::-webkit-color-swatch {
 /* ------------ HOME */
 .jumbotron {
   background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),
-   url(../images/fabric-color.jpg) no-repeat center / cover;
+  url(https://res.cloudinary.com/dwccjr3n4/image/upload/v1637787482/static/images/fabric-color.59ce5bbd2f9f.jpg) no-repeat center / cover;
   color: white;
   padding-top : 150px;
   padding-bottom : 100px;
