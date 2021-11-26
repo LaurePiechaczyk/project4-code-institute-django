@@ -161,3 +161,9 @@ input[type="color"]::-webkit-color-swatch {
     display: block; 
   }
 }
+
+@media (max-width: 411px) {
+  .main-title-animation {
+    width: 100%;
+  }
+}
