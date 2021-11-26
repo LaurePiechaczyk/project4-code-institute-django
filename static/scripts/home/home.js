@@ -29,64 +29,44 @@ $(".main-title").hover(function(){
 function  getColor() {
     var colors = ['#a8c3ed','#f0b6db','#b6e5f0','#f0deb6','#cef5ea', 'white','#c23d51','#4280c2','#4abf92'];
     randomColor = colors[Math.floor(Math.random()*colors.length)];
-}
+};
 
-let delayNounsChange = 8
-const tlFeminin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
+// animation words changing in why not with colors
+let delayNounsChange = 8;
+
+let femininNounsList = ["Welt","Stimme","Stadt","Zeit"];
+const tlFeminin = new TimelineMax({ repeat: -1, repeatDelay: 1 });
 // example change words
-tlFeminin
-.to('.feminin-example', {
-    text:"Stimme", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.feminin-example', {
-    text:"Welt", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.feminin-example', {
-    text:"Stadt", 
-    duration:1,
-    delay:delayNounsChange,
-})
+for (let i = 0 ; i < femininNounsList.length; i++ ){
+    tlFeminin
+    .to('.feminin-example', {
+        text:femininNounsList[i], 
+        duration:1,
+        delay:delayNounsChange,
+    })
+};
 
-const tlMasculin = new TimelineMax({ repeat: -1, repeatDelay: 1 })
-tlMasculin
-.to('.masculin-example', {
-    text:"Name", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.masculin-example', {
-    text:"Mund", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.masculin-example', {
-    text:"Monat", 
-    duration:1,
-    delay:delayNounsChange,
-})
+const tlMasculin = new TimelineMax({ repeat: -1, repeatDelay: 1 });
+let masculinNounsList = ["Name","Mund","Monat","Baum"];
+for (let i = 0 ; i < masculinNounsList.length; i++ ){
+    tlMasculin
+    .to('.masculin-example', {
+        text:masculinNounsList[i], 
+        duration:1,
+        delay:delayNounsChange,
+    })
+};
 
-const tlNeuter = new TimelineMax({ repeat: -1, repeatDelay: 1 })
-tlNeuter
-.to('.neuter-example', {
-    text:"Gesicht", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.neuter-example', {
-    text:"Wasser", 
-    duration:1,
-    delay:delayNounsChange,
-})
-.to('.neuter-example', {
-    text:"Bett", 
-    duration:1,
-    delay:delayNounsChange,
-})
-
+const tlNeuter = new TimelineMax({ repeat: -1, repeatDelay: 1 });
+let neuterNounsList = ["Gesicht","Wasser","Bett","Auge"];
+for (let i = 0 ; i < neuterNounsList.length; i++ ){
+    tlNeuter
+    .to('.neuter-example', {
+        text:neuterNounsList[i],
+        duration:1,
+        delay:delayNounsChange,
+    })
+};
 
 //-------------- colors picker
 const femininColorPicker = document.getElementById('feminin-color-picker');
