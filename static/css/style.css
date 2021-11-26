@@ -33,6 +33,7 @@ a {
   text-decoration: none;
 }
 
+
 /* from https://stackoverflow.com/questions/11167281/webkit-css-to-control-the-box-around-the-color-in-an-inputtype-color */
 input[type="color"] {
 	-webkit-appearance: none;
@@ -68,6 +69,10 @@ input[type="color"]::-webkit-color-swatch {
 .grey-btn {
   background-color: rgb(163, 163, 163);
   color: black;
+}
+.grey-btn:hover {
+  background-color: rgb(122, 122, 122);
+  color: white;
 }
 
 .tissu-bg {

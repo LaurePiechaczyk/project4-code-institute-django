@@ -2,16 +2,17 @@
 {% block content %}
 
 <div class="container">
-  <h1>Add noun template</h1>
+  <br>
+  <h2 class="pt-5">Add noun</h2>
   <form method="POST" action="add_noun">
       {% csrf_token %}
       {{ form.as_p}}
       <div>  
-        <button class="btn btn-info btn-sm mb-2" type="submit">Add Noun</button>  
+        <button class="btn orange-btn btn-sm mb-2" type="submit">Add Noun</button>  
       </div>
   </form>  
-  <a href="{% url 'dashboard' %}">
-    <button class="btn btn-info btn-sm mt-2">Return to Dashboard</button>  
+  <a class="btn orange-btn btn-sm mt-2" href="{% url 'dashboard' %}">
+    Return to Dashboard
   </a> 
 </div>
 

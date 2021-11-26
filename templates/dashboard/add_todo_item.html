@@ -2,7 +2,8 @@
 {% block content %}
 
 <div class="container">
-    <h2>Add your ToDo Item</h2>
+    <br>
+    <h2 class="pt-5">Add your ToDo Item</h2>
     <form method="POST" action="add_todo_item">
         {% csrf_token %}
         <div>
@@ -19,7 +20,7 @@
         </div>
         <div>
             <p>
-                <button class="btn btn-info btn-sm mb-2" type="submit">Add Item</button>   
+                <button class="btn orange-btn btn-sm mb-2" type="submit">Add Item</button>   
             </p>
         </div>
     </form>

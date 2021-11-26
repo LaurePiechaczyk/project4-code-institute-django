@@ -2,13 +2,14 @@
 {% block content %}
 
 <div class="container">
-  <h1>edit noun template</h1>
+  <br>
+  <h2 class="pt-5">Edit your Noun</h2>
   <form method="POST">
       {% csrf_token %}
       {{ form.as_p}}
       <div>
           <p> 
-            <button class="btn btn-info btn-sm mb-2"  type="submit">Edit Noun</button>  
+            <button class="btn orange-btn btn-sm mb-2"  type="submit">Edit Noun</button>  
           </p>
       </div>
   </form>  
