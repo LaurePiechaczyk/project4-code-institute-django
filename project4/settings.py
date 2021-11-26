@@ -34,7 +34,7 @@ DEBUG = development
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['project4-german-in-color.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['project4-interim-vs-10nov21.herokuapp.com', 'localhost']
 
 # Application definition
 
