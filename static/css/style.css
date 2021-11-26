@@ -29,6 +29,10 @@ footer {
   color: rgb(168, 167, 167) !important;
 }
 
+.text-white-no-hover {
+  color: white;
+}
+
 a {
   text-decoration: none;
 }
@@ -159,11 +163,15 @@ input[type="color"]::-webkit-color-swatch {
   padding-top : 80px;
 }
 
-
 /* small screens */
 @media (max-width: 768px) {
   .main-title {
     display: block; 
+  }
+  .brain-color-img {
+
+    left: -20px;
+   
   }
 }
 
