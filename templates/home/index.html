@@ -103,13 +103,13 @@
         <div>Your NOUNS</div>
         <div class="diederdas-btn-group">
           <a href="{% url 'feminine_user' %}#learning">
-            <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="refreshPage()" >Die</button>
+            <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" >Die</button>
           </a>
           <a href="{% url 'masculine_user' %}#learning">
-            <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="refreshPage()">Der</button>
+            <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
           </a>
           <a href="{% url 'neutral_user' %}#learning"> 
-            <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="refreshPage()">Das</button>
+            <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
           </a>
         </div>
       </div>
@@ -121,25 +121,25 @@
         {% if theme.id %}
           <div class="diederdas-btn-group">
             <a href="{% url 'categorie_feminine' theme.id %}#learning">
-              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="reload()">Die</button>
+              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();">Die</button>
             </a>
             <a href="{% url 'categorie_masculine' theme.id %}#learning">
-              <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="reload()">Der</button>
+              <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
             </a>
             <a href="{% url 'categorie_neutral' theme.id %}#learning"> 
-              <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="reload()">Das</button>
+              <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
             </a>
           </div>
         {% else %}
           <div class="diederdas-btn-group">
             <a href="{% url 'feminine' %}#learning">
-              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg">Die</button>
+              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();">Die</button>
             </a>
             <a href="{% url 'masculine' %}#learning">
-              <button type="submit" class="btn m-1 diederdas-btn masculin-bg">Der</button>
+              <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
             </a>
             <a href="{% url 'neutral' %}#learning"> 
-              <button type="submit" class="btn m-1 diederdas-btn neutral-bg ">Das</button>
+              <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
             </a>
           </div>
         {% endif %}
