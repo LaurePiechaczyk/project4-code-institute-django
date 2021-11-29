@@ -1,6 +1,6 @@
 <h1 align="center"> Project 4 for Code Institute formation | DieDerDas | HTML - CSS - JS - DJANGO</h1>
 
-[View the live project here.](https://project4-interim-vs-10nov21.herokuapp.com/)
+[View the live project here.](https://project4-german-in-color.herokuapp.com/)
 
 DieDerDas is a website to learn the gender of German nouns with colors. It's an original idea I had 2 years ago when I started learning German and I made a first prototype of the site in 2020 (which is no longer online). 
 
@@ -185,10 +185,16 @@ The website is designed to be suitable for all devices. For example, the respons
 # Tests
 ## Code validation and issues found
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-- [W3C Markup Validation Homepage | Results]()
+- [W3C Markup Validation Homepage | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2F)
+
+- [W3C Markup Validation Login | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Flogin%2F)
+- [W3C Markup Validation Register | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Fsignup%2F)
+- [W3C Markup Validation Logout | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Flogout%2F)
 
 - [W3C CSS Validator | Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+
+Javascipt code was tested using [jshint](https://jshint.com/) and no error was found with /*jshint esversion: 6 */
 
 ## Testing User Stories
 
