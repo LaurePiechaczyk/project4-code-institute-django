@@ -262,6 +262,9 @@ pip3 install -r requirements.txt
 
 [stakocverflow](https://stakocverflow.com/) - Used throughout the project.
 
+
+excel to json https://www.youtube.com/watch?v=eC95DrKMEo8 https://www.aconvert.com/document/xls-to-json/ https://beautifytools.com/excel-to-json-converter.php
+
 ## Read me file credits
 
 

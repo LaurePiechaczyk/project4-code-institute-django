@@ -1,0 +1,6 @@
+[
+    {"model":"home.nouncategory","pk":"1","fields": { "noun_category":"Body"}},
+    {"model":"home.nouncategory","pk":"2","fields": { "noun_category":"Thriller"}},
+    {"model":"home.nouncategory","pk":"3","fields": { "noun_category":"Healthcare"}},
+    {"model":"home.nouncategory","pk":"4","fields": { "noun_category":"Sciences"}}
+]
