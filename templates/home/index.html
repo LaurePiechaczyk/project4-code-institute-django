@@ -7,10 +7,10 @@
 
   <div class="container">
 
-    <h1 class="display-4 main-title">
+    <div class="display-4 main-title pb-2">
       <div class="main-title-animation">GERMAN with</div>
       <div class="d-block d-md-inline text-color">COLORS</div> 
-    </h1>
+    </div>
 
     <h2 class="font-weight-light">DieDerDas game</h2>
     <p class="lead under-title">Learn German NOUNS by associating colors to the GENDERS</p>
@@ -30,13 +30,13 @@
   </div>
 
   <h2 class='font-weight-light'>HOW IT WORKS</h2>
-  <h3 class="font-weight-light">&#x2022 German nouns and genders</h3>
+  <h3 class="font-weight-light">&#x2022; German nouns and genders</h3>
   <p>
     In German, nouns are associated with one of three genders: masculine, feminine or neuter. <br>
     How do we learn which gender is associated with a noun? <br>
     
   </p>
-  <h3 class="font-weight-light">&#x2022 Why not with colors?</h3>
+  <h3 class="font-weight-light">&#x2022; Why not with colors?</h3>
 
 
   <div class="row">
@@ -62,10 +62,10 @@
     Do you want to try? 
     <a class="btn orange-btn pt-1 pb-2" href="#learning" role="button">Start learning</a> 
     <br> <br>
-    You can also choose your colors <span class="font-weight-bold">&#x2193</span> 
+    You can also choose your colors <span class="font-weight-bold">&#x2193;</span> 
   </p>
 
-  <h3 class="font-weight-light">&#x2022 Website customization</h3>
+  <h3 class="font-weight-light">&#x2022; Website customization</h3>
     <div>
       Pick a color for Feminine Nouns
     <input type="color" name="feminineColorPicker" id="feminin-color-picker"/>
@@ -102,14 +102,14 @@
       <div class="col-6 col-md-4 col-lg-3">
         <div>Your NOUNS</div>
         <div class="diederdas-btn-group">
-          <a href="{% url 'feminine_user' %}#learning">
-            <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" >Die</button>
+          <a class="btn mt-1 mr-1 diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'feminine_user' %}#learning">
+            Die
           </a>
-          <a href="{% url 'masculine_user' %}#learning">
-            <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
+          <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'masculine_user' %}#learning">
+            Der
           </a>
-          <a href="{% url 'neutral_user' %}#learning"> 
-            <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
+          <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'neutral_user' %}#learning"> 
+            Das
           </a>
         </div>
       </div>
@@ -120,26 +120,26 @@
         <div class="">Default NOUNS</div>
         {% if theme.id %}
           <div class="diederdas-btn-group">
-            <a href="{% url 'categorie_feminine' theme.id %}#learning">
-              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();">Die</button>
+            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'categorie_feminine' theme.id %}#learning">
+              Die
             </a>
-            <a href="{% url 'categorie_masculine' theme.id %}#learning">
-              <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
+            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'categorie_masculine' theme.id %}#learning">
+              Der
             </a>
-            <a href="{% url 'categorie_neutral' theme.id %}#learning"> 
-              <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
+            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'categorie_neutral' theme.id %}#learning"> 
+              Das
             </a>
           </div>
         {% else %}
           <div class="diederdas-btn-group">
-            <a href="{% url 'feminine' %}#learning">
-              <button type="submit" class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();">Die</button>
+            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'feminine' %}#learning">
+              Die
             </a>
-            <a href="{% url 'masculine' %}#learning">
-              <button type="submit" class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();">Der</button>
+            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'masculine' %}#learning">
+              Der
             </a>
-            <a href="{% url 'neutral' %}#learning"> 
-              <button type="submit" class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();">Das</button>
+            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'neutral' %}#learning"> 
+              Das
             </a>
           </div>
         {% endif %}

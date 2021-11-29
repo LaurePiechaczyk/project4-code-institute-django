@@ -123,8 +123,13 @@ input[type="color"]::-webkit-color-swatch {
   padding-bottom: 3px;
 }
 
+.diederdas-btn {
+  color: white;
+}
+
 .diederdas-btn:hover, .nav-link:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  color: white;
 }
 
 .all-words-display-container {
