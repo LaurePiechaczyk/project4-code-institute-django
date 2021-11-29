@@ -2,9 +2,11 @@
 
 [View the live project here.](https://project4-interim-vs-10nov21.herokuapp.com/)
 
-DieDerDas is a website to learn the gender of German nouns with colors. It is an original Idea I had 2 years ago when I started to learn German and 'i had made a first website prototype in 2020 (not online anymore). 
+DieDerDas is a website to learn the gender of German nouns with colors. It's an original idea I had 2 years ago when I started learning German and I made a first prototype of the site in 2020 (which is no longer online). 
 
-In this version, users can login and interact with the database to enter there set of Nouns or they can use the default nouns.
+In this version, users can log in and interact with the database to enter their own set of nouns or they can use the default nouns.
+
+
 This project is built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer). 
 
 <h3 align="center"><img src="static/images/readme/main-readme.png"></h3>
@@ -42,24 +44,24 @@ This project is built as part of a project for the [code institute](https://code
 
 </details>
 
-## Background to understand the purpose of the game
+# Background to understand the purpose of the website
 In German, nouns are associated with one of three genders: masculine, feminine or neuter.
 
 It leads to the question: 
 How do we learn which gender is associated with a noun?
 
 ## Aim of the project
-Create a website to help the user learning German Nouns by associated colors to the nouns.
+Create a website to help the user learn German nouns by associating colors to the nouns.
 
-# Target audience
+## Target audience
 Learners of German, especially those who want to improve their knowledge of German Nouns genders. 
 
 
 # User Experience
 ## Visitor Goals
 - ### First Time Visitor Goals
-  - As a Visitor, I want to easily understand the main purpose of the site.
-  - As a Visitor, I want to understand easelly how the learning works.
+  - As a First Time Visitor, I want to easily understand the main purpose of the site.
+  - As a First Time Visitor, I want to easily understand how the learning works.
   - As a First Time Visitor, I want to get motivation and inspiration.
   - As a First Time Visitor, I want to start playing/learning rapidly.
   - As a First Time Visitor, I want to learn and get motivation.
@@ -75,10 +77,11 @@ Learners of German, especially those who want to improve their knowledge of Germ
 
 ## UI Design
 - ### Fonts 
-Default Font from bootstrap were kept, i.e :  Because they look nice and are easy to read
+Default Font from bootstrap were kept, i.e :  Because it looks nice and it is and easy to read
 
 - ### Colors
-Colors were inspirided from the hero pictures
+Colors were inspirided from the hero pictures.
+ie:
 
 
 
@@ -100,36 +103,41 @@ Colors were inspirided from the hero pictures
 # Features 
 
 - ### Hero Section
-A picture with colors was used for the hero section to illustrate the thema of the website which aims to help learning German with Colors.
-Animation on the text has been made where German with Colors becomes Learn with colors with mouse over. The aim is to stimulate and interrest the user
-Buttons to reach part of the website are placed in the hero so the user can rapidly go to the place of the website he/she wants rapidly.
+An image with colors was used for the hero section to illustrate the theme of the site which aims to help learn German with colors.
+An animation was made on the text, where "German with Colors" becomes "Learn with colors" when the mouse passes over it. The objective is to stimulate and interest the user.
+
+Buttons to access sub-sections of the site are placed in the hero so that the user can quickly go to the desired place on the site.
+
 <h3 align="center"><img src="static/images/readme/Hero-section.png"></h3>
 
 - ### How it works Section
-The section explains the concept of the website without to much text to not bore the user and an example with animation is made so the user can understand the concept even without reading the text. 
-The user can also customize the colors associated to each gender.
+The section explains the concept of the website without too much text to not bore the user. 
+
+An example with animation has been created so that the user can understand the concept even without reading the text. 
+
+The user can also customize the colors associated with each gender.
 <h3 align="center"><img src="static/images/readme/How-it-works.png"></h3>
 
 - ### Start learning Section
-The user can click on buttons to start learning. If the user is register, there is the possibility to used the owned nouns and thema can be chosen for the default nouns
+The user can click on the buttons to start learning. If the user is registered, he/she has the possibility to use own nouns as well as the default nouns.
 <h3 align="center"><img src="static/images/readme/start-learning.png"></h3>
 
 
 - ### Register, Login, Logout Section
-Users can register, login, logout to access there own dashboard
+Users can register, log in and log out to access their own dashboard.
 <h3 align="center"><img src="static/images/readme/signin.png"></h3>
 
 
 - ### Dashboard Section
-In the dashboard, the user can have a todo list, edit, toogle and delete the items.
-The user can also enter edit delete Nouns in the part of the website.
+In the dashboard, the user can have a list of tasks, edit, toogle and delete the items.
+The user can also enter, edit and delete nouns.
 <h3 align="center"><img src="static/images/readme/Dashboard-pic.png"></h3>
 
 - ### Add edit delete
 <h3 align="center"><img src="static/images/readme/add-nouns.png"></h3>
 
 - ### Footer
-The footer was kept simple with a sentence and an email for contact. The email has been created for the project and I would receive the question/feedback. As no social nedia has been created for this project, no link was added.
+The footer was kept simple, with a sentence and an email address for contact. Since no social media was created for this project, no links were added. The email address is real and I would receive inquiries.
 
 ## Responsiveness
 The website is designed to be suitable for all devices. For example, the responsive navigation bar turns into a burger button for phone screens.
@@ -185,30 +193,29 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ## Testing User Stories
 
 - ### First Time Visitor Goals
-  - As a Visitor, I want to easily understand the main purpose of the site.
-    - The title DieDerDas + German with colors give some indication about the website aim and still in the Hero part, a sentence explains the aim of the website "Learn German NOUNS by associating colors to the GENDERS"
-  - As a Visitor, I want to understand easelly how the learning works.
-    - An animation has been made to explain how the website works and in the learning section the user can click on buttons to see how it works with default Nouns
+  - As a First Time Visitor, I want to easily understand the main purpose of the site.
+    - The title DieDerDas + German with colors gives some indications about the purpose of the site and still in the Hero part, a sentence explains the purpose of the site "Learn German NAMES by associating colors with GENDERS".
+  - As a First Time Visitor, I want to easily understand how the learning works.
+    - An animation was made to explain how the website works and in the learning section, the user can click on buttons to see how it works with default nouns.
   - As a First Time Visitor, I want to get motivation and inspiration.
-    - Images with colors have been placed to stimulate the user and that the user feels surrounding by colors.
+    - The colorful images have been placed in a way that stimulates the user and makes them feel surrounded by color.
   - As a First Time Visitor, I want to start playing/learning rapidly.
-    - In the hero page, a button is placed to reach the learning section rapidly
+    - In the hero page, a button is placed to quickly access the learning section.
   - As a First Time Visitor, I want to be able to easily navigate throughout the site.
-    - The navbar is fixed so the user can always access to the link in it. Buttons are placed to navigate the website easilly.
+    - The navigation bar is fixed so that the user can always access the link it contains. The buttons are placed in such a way as to facilitate navigation on the site.
   - As a First Time Visitor, I want to access the site across a range of devices.
     - The site is designed for all devices
-  
 
 - ### Returning Visitor Goals
 
   - As a Returning Visitor, I want to be able to use my own Nouns.
-    - The user can login to use, add, edit, delete owned nouns
+    - The user can log in to use, add, modify and delete nouns.
   - As a Returning Visitor, I want to find how to contact the organisation with any questions I may have.
-    - in the footer, an email is given so the user can contact the ownerof the website
+    - In the footer, an email address is provided so that the user can contact the website owner.
 
 - ### Frequent User Goals
   - As a Frequent User, I want to organize my learning in the website.
-    - A Todolist section offers the user to organize his her work.
+    - A Todo section allows the user to organize his/her work.
 
 ## Test on browsers
 The website was tested on computers using the browsers:
