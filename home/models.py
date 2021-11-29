@@ -29,11 +29,3 @@ class Noun(models.Model):
 
     def __str__(self):
         return self.german_noun
-
-
-class GenderToDisplay (models.Model):
-    gender_to_display = models.ForeignKey(Gender, on_delete=models.CASCADE)
-
-
-class ChosenCategories(models.Model):
-    chosen_category = models.CharField(max_length=50, blank=True, null=True)
