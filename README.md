@@ -142,6 +142,11 @@ The footer was kept simple, with a sentence and an email address for contact. Si
 ## Responsiveness
 The website is designed to be suitable for all devices. For example, the responsive navigation bar turns into a burger button for phone screens.
 
+## Futur
+The user can add its own categories, 
+level of difficulties with the Nouns
+When a noun is clicked, the card can turn and a sentence with the noun is written to help learning nouns in a context.
+
     
 # Technologies used
 ## Languages used
@@ -151,10 +156,16 @@ The website is designed to be suitable for all devices. For example, the respons
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
-## Frameworks and Programs used
-- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework))
+## Frameworks
+- [Bootstrap](https://getbootstrap.com/)
 
-- [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
+- [Django](https://www.djangoproject.com/)
+
+- [GreenSock](https://greensock.com/)
+
+- [jQuery](https://jquery.com/)
+
+## Others
 
 - [PostgreSQL](https://www.postgresql.org/) database used in development mode and database in production mode
 
@@ -178,9 +189,9 @@ The website is designed to be suitable for all devices. For example, the respons
 
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) | used to inspect the elements, codes and to see the how the site look like on various phones and tablets
 
-- [DeepL](https://www.deepl.com/) |  used to translate words from French to English and to write the content of the website and the 'Read me' file
+- [DeepL](https://www.deepl.com/) | used to translate words from French to English and to write the content of the website and the 'Read me' file
 
-- [cloudinary]
+- [cloudinary]| used to store images
 
 # Tests
 ## Code validation and issues found
@@ -246,16 +257,76 @@ The project was stored in GitHub and deployed in Heroku. Heroku Postgres was use
 - Either download the ZIP file, unpackage locally and open with IDE OR to clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 - Open Git Bash
 - Change the current working directory to the location where you want the cloned directory to be made
-- Type git clone, and then paste the URL you copied.
+- Type `git clone`, and then paste the URL you copied.
 - Press Enter. Your local clone will be created.
+- Create a file called env.py to hold your app's environment variables, which should contain the following:
+```console
+import os
 
-## Installing required softwares
+os.environ["DATABASE_URL"] = "app database"
+os.environ["SECRET_KEY"] = "app secret key"
+os.environ["CLOUDINARY_URL"] = "cloudinary URL"
+
+```
+- Make sure the following are listed in your .gitignore file to prevent any environment variables being pushed publicly:
+`env.py`
+
+
+### Installing required softwares
 In the terminal enter 
 
-pip3 install -r requirements.txt
+`pip3 install -r requirements.txt`
+
+### Applying database migrations
+In the terminal enter 
+```
+python manage.py migrate
+```
+### Creating a new superuser
+```
+python manage.py createsuperuser
+```
+### Creating a Default User
+To be done just after the superuser creation so the id of the Default user will be 2 (important to use the default nouns).
+Can be done in Admin.
+
+### Entering Genders
+Still in Admin, Add 3 genders. It is important to keep the following order:
+1- Neutral
+2- Masculin
+3- Feminin
+
+### Load categories and noun data from json file (found in home --> fixtures)
+- load first categories by entering in the terminal:
+`python3 manage.py loaddata categories`
+- Then load the nouns by entering in the terminal:
+`python3 manage.py loaddata nouns`
+
+### The app can now be run locally using
+```
+python manage.py runserver
+```
 
 ## Heroku Deployment
+- Register or login [Heroku](https://id.heroku.com/login)
+- Choose a unique name for the app and the location nearest to you.
+- Under **Resources** search for and add **Heroku Postgres** to your app
+- In your local environement in the env.py file, enter the database URL (to find the URL, in HEROKU go to settings --> click "Reveal Config VARS")
+- In Heroku, add a SECRET_KEY var (must be the same as the one in your env.py file)
+- Add the hostname of your Heroku app to settings.py
+```
+ALLOWED_HOSTS = ['YOUR-APP-NAME.herokuapp.com', 'localhost']
+```
+- In Heroku, select the **Deploy** tab and under **Deployment method** choose GitHub
+- In **Connect to GitHub** enter your GitHub repository details and once found, click **Connect**
+- under **Manual deploy** choose **Deploy Branch**
 
+- The steps from the previous section have to be repeated to load data in the new database (can be done in the local environment):
+  - Applying database migrations
+  - Creating a new superuser
+  - Creating an Default User
+  - Entering Genders
+  - Load categories and noun data from json file
 
 
 # Credits
@@ -272,7 +343,7 @@ pip3 install -r requirements.txt
 excel to json https://www.youtube.com/watch?v=eC95DrKMEo8 https://www.aconvert.com/document/xls-to-json/ https://beautifytools.com/excel-to-json-converter.php
 
 ## Read me file credits
-
+https://github.com/farrelleoin93/12-acres-beer
 
 ## Pictures credits
 Pictures were taken from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/).
