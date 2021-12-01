@@ -20,7 +20,6 @@ class Gender(models.Model):
 class Noun(models.Model):
 
     german_noun = models.CharField(max_length=50, null=False, blank=False)
-    # article = models.CharField(max_length=3, blank=True, null=True)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
     english_noun = models.CharField(max_length=50, blank=True, null=True)
     german_plural = models.CharField(max_length=50, blank=True, null=True)
