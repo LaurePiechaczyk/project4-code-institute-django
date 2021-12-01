@@ -77,13 +77,10 @@ Learners of German, especially those who want to improve their knowledge of Germ
 
 ## UI Design
 - ### Fonts 
-Default Font from bootstrap were kept, i.e :  Because it looks nice and it is and easy to read
+Default Font from bootstrap were kept, i.e :"Helvetica Neue", Helvetica, Arial, sans-serif, because it looks nice and it is and easy to read
 
 - ### Colors
-Colors were inspirided from the hero pictures.
-ie:
-
-
+Colors were inspirided from the hero pictures. A color picker was used in powerpoint to take some colors codes in the picture. A dark background was used using the color #06546b; orange and bordeaux buttons using the colors: #e75e2cc9; #5F1C29.
 
 ## Wireframes
 
@@ -142,7 +139,7 @@ The footer was kept simple, with a sentence and an email address for contact. Si
 ## Responsiveness
 The website is designed to be suitable for all devices. For example, the responsive navigation bar turns into a burger button for phone screens.
 
-## Futur
+## Future
 The user can add its own categories, 
 level of difficulties with the Nouns
 When a noun is clicked, the card can turn and a sentence with the noun is written to help learning nouns in a context.
@@ -177,7 +174,7 @@ When a noun is clicked, the card can turn and a sentence with the noun is writte
 
 - [Balsamiq](https://balsamiq.com/) |  used to create the wireframe
 
-- [Powerpoint](https://simple.wikipedia.org/wiki/Microsoft_PowerPoint) | used to create images from screenshots
+- [Powerpoint](https://simple.wikipedia.org/wiki/Microsoft_PowerPoint) | used to create images from screenshots and work with images
 
 - [Word](https://en.wikipedia.org/wiki/Microsoft_Word) | used to correct the grammar
 
@@ -193,6 +190,9 @@ When a noun is clicked, the card can turn and a sentence with the noun is writte
 
 - [cloudinary]| used to store images
 
+- [aconvert](https://www.aconvert.com/document/xls-to-json/) and [beautifytools](https://beautifytools.com/excel-to-json-converter.php) | used to convert excel file into json format
+
+
 # Tests
 ## Code validation and issues found
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -206,6 +206,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 
 Javascipt code was tested using [jshint](https://jshint.com/) and no error was found with /*jshint esversion: 6 */
+
+Python .....
 
 ## Testing User Stories
 
@@ -245,11 +247,12 @@ The website was tested on computers using the browsers:
 ## Test on devices
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
 
+## Automatic testing
+
 
 # Deployment
 ## GitHub Pages
 The project was stored in GitHub and deployed in Heroku. Heroku Postgres was used for the database. Cloudinary to store the pictures.
-
 
 ## Making a Local Clone
 - Log in to GitHub and locate the GitHub Repository.
@@ -333,20 +336,21 @@ ALLOWED_HOSTS = ['YOUR-APP-NAME.herokuapp.com', 'localhost']
 
 ## Code credits
 [code institute](https://codeinstitute.net/) - Parts of the code throughout the website have been adapted from the courses.
-
+The main courses were: "I think Therefore I Blog"; "Hello Django"; "Boutique Ado"
 
 [w3schools](https://www.w3schools.com/) - Used throughout the project.
 
 [stakocverflow](https://stakocverflow.com/) - Used throughout the project.
 
+[very Academy](https://www.youtube.com/watch?v=eC95DrKMEo8) Trick to Create Django Fixtures from Excel/CSV File.
 
-excel to json https://www.youtube.com/watch?v=eC95DrKMEo8 https://www.aconvert.com/document/xls-to-json/ https://beautifytools.com/excel-to-json-converter.php
 
 ## Read me file credits
-https://github.com/farrelleoin93/12-acres-beer
+Some parts of the readme file from [farrelleoin93](https://github.com/farrelleoin93/12-acres-beer) have been adapted to write this readme file
 
 ## Pictures credits
-Pictures were taken from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/).
+The [picture in the hero section](https://pixabay.com/fr/photos/gobelins-carr%c3%a9-cercle-d%c3%a9tail-jaune-1491577/) was taken from Stux from [Pixabay](https://pixabay.com/).
+The [colored brain image](https://pixabay.com/fr/illustrations/r%c3%a9seau-de-neurones-artificiels-ann-3501528/) was from ahmedgad from [Pixabay](https://pixabay.com/)
 
 
 # Acknowledgments
