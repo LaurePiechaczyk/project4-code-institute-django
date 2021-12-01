@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 # Functions items and nouns
 def dashboard(request):
     context = {
-        'owned_items' : owned_todo_list(request.user),
+        'owned_items': owned_todo_list(request.user),
         'owned_nouns': owned_nouns_list(request.user),
         }
     return render(request, 'dashboard/dashboard.html', context)
@@ -22,7 +22,7 @@ def owned_todo_list(set_user):
 
 def todo_dashboard(request):
     context = {
-        'owned_items' : owned_todo_list(request.user),
+        'owned_items': owned_todo_list(request.user),
         'owned_nouns': owned_nouns_list(request.user),
         'show_todo': 'show'
         }
@@ -33,7 +33,8 @@ def add_todo_item(request):
     '''
     This function does not use from forms.py "ItemForm" for learning purpose
     "ItemForm" will be used for editing the Items
-    However, this function is a good example how to edit without using form and understand the CRUD process
+    However, this function is a good example how to edit without using form 
+    and understand the CRUD process
     '''
     if request.method == 'POST':
         name = request.POST.get('item_name')
@@ -79,13 +80,13 @@ def delete_todo_item(request, item_id):
 
 # Function related to noun list
 def owned_nouns_list(set_user):
-  owned_nouns = Noun.objects.filter(owner=set_user).all()
-  return owned_nouns
+    owned_nouns = Noun.objects.filter(owner=set_user).all()
+    return owned_nouns
 
 
 def noun_dashboard(request):
     context = {
-        'owned_items' : owned_todo_list(request.user),
+        'owned_items': owned_todo_list(request.user),
         'owned_nouns': owned_nouns_list(request.user),
         'show_nouns': 'show'
         }
@@ -106,7 +107,7 @@ def add_noun(request):
     context = {
         'form': form
     }
-    return render(request,'dashboard/add_noun.html', context)
+    return render(request, 'dashboard/add_noun.html', context)
 
 
 def edit_noun(request, noun_id):

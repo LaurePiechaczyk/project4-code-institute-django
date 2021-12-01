@@ -25,7 +25,12 @@ class Noun(models.Model):
     english_noun = models.CharField(max_length=50, blank=True, null=True)
     german_plural = models.CharField(max_length=50, blank=True, null=True)
     categories = models.ManyToManyField(NounCategory, blank=True)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    owner = models.ForeignKey(
+        User, 
+        on_delete=models.CASCADE, 
+        blank=True, 
+        null=True
+        )
 
     def __str__(self):
         return self.german_noun

@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
-    'csvimport.app.CSVImportConf',  # use AppConfig for django >=1.7 csvimport >=2.2
     'crispy_forms',
     'home',
     'dashboard',
@@ -106,7 +105,7 @@ WSGI_APPLICATION = 'project4.wsgi.application'
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }

@@ -16,27 +16,31 @@ def home(request):
     return render(request, 'home/index.html', context)
 
 
-# ------------------- To display default NOUNS. Categories are available only in default owner
-#For displaying default without categories
+# To display default NOUNS. Categories are available only in default owner
+# For displaying default without categories
 def feminine(request):
-    context = index_with_noun_list_owned('Feminin', '2')  #2 is for the default user here. might have to be changed
+    context = index_with_noun_list_owned('Feminin', '2')
     return render(request, 'home/index.html', context)
+
 
 def masculine(request):
-    context = index_with_noun_list_owned('Masculin', '2')  #2 is for the default user here. might have to be changed
+    context = index_with_noun_list_owned('Masculin', '2')
     return render(request, 'home/index.html', context)
+
 
 def neutral(request):
-    context = index_with_noun_list_owned('Neutral', '2')  #2 is for the default user here. might have to be changed
+    context = index_with_noun_list_owned('Neutral', '2')
     return render(request, 'home/index.html', context)
 
-#For displaying default with categories
+
+# For displaying default with categories
 def go_to_category(request, category_id):
     category = get_object_or_404(NounCategory, id=category_id)
     context = index_with_gender_and_category('', category)
     return render(request, 'home/index.html', context)
 
-#For displaying default with categories + gender
+
+# For displaying default with categories + gender
 def categorie_feminine(request, category_id):
     category = get_object_or_404(NounCategory, id=category_id)
     context = index_with_gender_and_category('Feminin', category)
@@ -48,10 +52,12 @@ def categorie_masculine(request, category_id):
     context = index_with_gender_and_category('Masculin', category)
     return render(request, 'home/index.html', context)
 
+
 def categorie_neutral(request, category_id):
     category = get_object_or_404(NounCategory, id=category_id)
     context = index_with_gender_and_category('Neutral', category)
     return render(request, 'home/index.html', context)
+
 
 # owner='2' is the default owner. It is to display only the default NOUNS
 def index_with_gender_and_category(chosen_gender, chosen_category):
@@ -68,6 +74,7 @@ def index_with_gender_and_category(chosen_gender, chosen_category):
     }
     return context
 
+
 # owner='2' is the default owner. It is to display only the default NOUNS
 def index_with_category(chosen_category):
     nouns = Noun.objects.filter(owner='2').filter( 
@@ -82,6 +89,7 @@ def index_with_category(chosen_category):
     }
     return context
 
+
 def index_with_noun_list_owned(chosen_gender, set_user):
     nouns = Noun.objects.filter(owner=set_user).filter(
       gender__noun_gender__contains=chosen_gender).order_by(
@@ -94,14 +102,17 @@ def index_with_noun_list_owned(chosen_gender, set_user):
     }
     return context
 
-# ------------- To display only owned nouns. The user has to be logged in
+
+# To display only owned nouns. The user has to be logged in
 def feminine_user(request):
     context = index_with_noun_list_owned('Feminin', request.user)
     return render(request, 'home/index.html', context)
 
+
 def masculine_user(request):
     context = index_with_noun_list_owned('Masculin', request.user)
     return render(request, 'home/index.html', context)
+
 
 def neutral_user(request):
     context = index_with_noun_list_owned('Neutral', request.user)

@@ -77,10 +77,10 @@ Learners of German, especially those who want to improve their knowledge of Germ
 
 ## UI Design
 - ### Fonts 
-Default Font from bootstrap were kept, i.e :"Helvetica Neue", Helvetica, Arial, sans-serif, because it looks nice and it is and easy to read
+Default Font from bootstrap were kept, i.e:"Helvetica Neue", Helvetica, Arial, sans-serif, because it looks nice and it is and easy to read
 
 - ### Colors
-Colors were inspirided from the hero pictures. A color picker was used in powerpoint to take some colors codes in the picture. A dark background was used using the color #06546b; orange and bordeaux buttons using the colors: #e75e2cc9; #5F1C29.
+Colors were inspired from the hero pictures. A color picker was used in PowerPoint to take some colors codes in the picture. A dark background was used using the color #06546b; orange and Bordeaux buttons using the colors: #e75e2cc9; #5F1C29.
 
 ## Wireframes
 
@@ -188,7 +188,9 @@ When a noun is clicked, the card can turn and a sentence with the noun is writte
 
 - [DeepL](https://www.deepl.com/) | used to translate words from French to English and to write the content of the website and the 'Read me' file
 
-- [cloudinary]| used to store images
+- [Linguee](https://www.linguee.com/) | used to translate nouns, verify the gender and get the plural of the nouns.
+
+- [cloudinary] | used to store images
 
 - [aconvert](https://www.aconvert.com/document/xls-to-json/) and [beautifytools](https://beautifytools.com/excel-to-json-converter.php) | used to convert excel file into json format
 
@@ -207,7 +209,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 Javascipt code was tested using [jshint](https://jshint.com/) and no error was found with /*jshint esversion: 6 */
 
-Python .....
+Python the code was passed in [PEP8 online checker](http://pep8online.com) without showing errors except for few lines in the setting.py file because some line are too long. This was for lines automatically written at the Django installation and these lines were left.
 
 ## Testing User Stories
 
@@ -249,6 +251,19 @@ The website was tested on computers using the browsers:
 
 ## Automatic testing
 
+### Javascript
+
+### Python
+
+## Manual testing
+
+### Javascript
+The animations were tested by moving the mouse over German in Color several times. In the section Why not with colors by watching the text change.
+
+The color picker was tested by changing the colors several times, refreshing the page to make sure the colors stayed, and clicking on the reset default colors button.
+
+### Python
+The Backend was tested by clicking on the Die Der Das buttons, the theme button + the Die Der Das buttons. Creating new users and adding Nouns in the Dashboard, deleting and editing them. Creating ToDo Items, editing, deleting and toogle. In the homepage, when the user is logged in, it has been tested that custum nouns can be used and that they are not used in the default nouns.
 
 # Deployment
 ## GitHub Pages
@@ -314,7 +329,7 @@ python manage.py runserver
 - Register or login [Heroku](https://id.heroku.com/login)
 - Choose a unique name for the app and the location nearest to you.
 - Under **Resources** search for and add **Heroku Postgres** to your app
-- In your local environement in the env.py file, enter the database URL (to find the URL, in HEROKU go to settings --> click "Reveal Config VARS")
+- In your local environment in the env.py file, enter the database URL (to find the URL, in HEROKU go to settings --> click "Reveal Config VARS")
 - In Heroku, add a SECRET_KEY var (must be the same as the one in your env.py file)
 - Add the hostname of your Heroku app to settings.py
 ```
@@ -327,7 +342,7 @@ ALLOWED_HOSTS = ['YOUR-APP-NAME.herokuapp.com', 'localhost']
 - The steps from the previous section have to be repeated to load data in the new database (can be done in the local environment):
   - Applying database migrations
   - Creating a new superuser
-  - Creating an Default User
+  - Creating a Default User
   - Entering Genders
   - Load categories and noun data from json file
 
@@ -352,6 +367,8 @@ Some parts of the readme file from [farrelleoin93](https://github.com/farrelleoi
 The [picture in the hero section](https://pixabay.com/fr/photos/gobelins-carr%c3%a9-cercle-d%c3%a9tail-jaune-1491577/) was taken from Stux from [Pixabay](https://pixabay.com/).
 The [colored brain image](https://pixabay.com/fr/illustrations/r%c3%a9seau-de-neurones-artificiels-ann-3501528/) was from ahmedgad from [Pixabay](https://pixabay.com/)
 
+## Nouns list
+The list of nouns comes mainly from the German courses I took at the IKI and IFU schools in Vienna. The genders, English translations and plurals were checked with [Linguee] (https://www.linguee.com/). Themes were done manually.
 
 # Acknowledgments
 - My mentor, Nishant Kumar, for giving me the direction to start the project, for guiding me through the project, for giving me the idea to implement new features and for giving me feedback.
@@ -360,4 +377,4 @@ The [colored brain image](https://pixabay.com/fr/illustrations/r%c3%a9seau-de-ne
 
 - The Slack community for clarifying certain concepts, sharing tips and links and, of course, for always helping me with the codes.
 
-- Code institutes student care for giving me clear advice on the project when I was unsure of the theme and expectations.
+- The tutors in Code institutes for helping with the codes.
