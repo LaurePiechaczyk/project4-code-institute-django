@@ -254,6 +254,8 @@ The website was tested on computers using the browsers:
 ### Javascript
 
 ### Python
+Some automatic python tests were conducted and can found in home and dashboard apps.
+The forms for creating Todo Items and entering nouns, the Todo model, and the views were tested.
 
 ## Manual testing
 

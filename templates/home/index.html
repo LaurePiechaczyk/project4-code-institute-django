@@ -102,13 +102,13 @@
       <div class="col-6 col-md-4 col-lg-3">
         <div>Your NOUNS</div>
         <div class="diederdas-btn-group">
-          <a class="btn mt-1 mr-1 diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'feminine_user' %}#learning">
+          <a class="btn mt-1 mr-1 diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'feminin' %}#learning">
             Die
           </a>
-          <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'masculine_user' %}#learning">
+          <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'masculin' %}#learning">
             Der
           </a>
-          <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'neutral_user' %}#learning"> 
+          <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'neutral' %}#learning"> 
             Das
           </a>
         </div>
@@ -120,25 +120,25 @@
         <div class="">Default NOUNS</div>
         {% if theme.id %}
           <div class="diederdas-btn-group">
-            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'categorie_feminine' theme.id %}#learning">
+            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'categorie_gender' theme.id 'feminin' %}#learning">
               Die
             </a>
-            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'categorie_masculine' theme.id %}#learning">
+            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'categorie_gender' theme.id 'masculin' %}#learning">
               Der
             </a>
-            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'categorie_neutral' theme.id %}#learning"> 
+            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'categorie_gender' theme.id 'neutral' %}#learning"> 
               Das
             </a>
           </div>
         {% else %}
           <div class="diederdas-btn-group">
-            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'feminine' %}#learning">
+            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'gender' 'feminin' %}#learning">
               Die
             </a>
-            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'masculine' %}#learning">
+            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'gender' 'masculin' %}#learning">
               Der
             </a>
-            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'neutral' %}#learning"> 
+            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'gender' 'neutral' %}#learning"> 
               Das
             </a>
           </div>
