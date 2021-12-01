@@ -18,17 +18,8 @@ def home(request):
 
 # For displaying default without categories
 def gender(request, clicked_gender):
-    if clicked_gender == "feminin":
-      context = index_with_noun_list_owned('Feminin', '2')
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "masculin":
-      context = index_with_noun_list_owned('Masculin', '2')
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "neutral":
-      context = index_with_noun_list_owned('Neutral', '2')
-      return render(request, 'home/index.html', context)
+    context = index_with_noun_list_owned(clicked_gender, '2')
+    return render(request, 'home/index.html', context)
 
 
 # For displaying default with categories
@@ -41,17 +32,8 @@ def go_to_category(request, category_id):
 # For displaying default with categories + gender
 def categorie_gender(request, category_id, clicked_gender):
     category = get_object_or_404(NounCategory, id=category_id)
-    if clicked_gender == "feminin":
-      context = index_with_gender_and_category('Feminin', category)
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "masculin":
-      context = index_with_gender_and_category('Masculin', category)
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "neutral":
-      context = index_with_gender_and_category('Neutral', category)
-      return render(request, 'home/index.html', context)
+    context = index_with_gender_and_category(clicked_gender, category)
+    return render(request, 'home/index.html', context)
 
 
 def index_with_gender_and_category(chosen_gender, chosen_category):
@@ -97,16 +79,7 @@ def index_with_noun_list_owned(chosen_gender, set_user):
 
 
 # To display only owned nouns. The user has to be logged in
-def user_gender(request, clicked_gender ):
-    if clicked_gender == "feminin":
-      context = index_with_noun_list_owned('Feminin', request.user)
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "masculin":
-      context = index_with_noun_list_owned('Masculin', request.user)
-      return render(request, 'home/index.html', context)
-
-    elif clicked_gender == "neutral":
-      context = index_with_noun_list_owned('Neutral', request.user)
-      return render(request, 'home/index.html', context)
+def user_gender(request, clicked_gender):
+    context = index_with_noun_list_owned(clicked_gender, request.user)
+    return render(request, 'home/index.html', context)
 
