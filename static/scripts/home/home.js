@@ -1,10 +1,3 @@
-// ------------ ALERT
-var alerted = localStorage.getItem('alerted') || '';
-if (alerted != 'yes') {
- alert("Please note that this website is a work in progress. It is an intermediate version that is not finished.");
- localStorage.setItem('alerted','yes');
-}
-
 // ------------ ANIMATION Index page
 // Main title
 var randomColor;
