@@ -12,39 +12,29 @@ This project is built as part of a project for the [code institute](https://code
 <h3 align="center"><img src="static/images/readme/main-readme.png"></h3>
 
 # Table of content
-<details>
-<summary>Open the Table of Contents here</summary>
 
 [About The Project](#about-the-project) 
 
 [Target audience](#target-audience)  
 
 [User Experience](#user-experience)
-- [User stories](#user-stories)
-- [Design](#design)
 
 [Features](#features)  
 
-
 [Technologies used](#technologies-used)
-- [Languages used](#languages-used)
-- [Frameworks and Programs used](#frameworks-and-programs-used)
 
 [Tests](#tests)
 
-
 [Deployment](#deployment) 
-- [GitHub Pages](#github-pages)
-- [Making a Local Clone](#making-a-local-clone)
 
 [Credits](#credits)
 
-
 [Acknowledgments](#acknowledgments)
 
-</details>
 
-# Background to understand the purpose of the website
+# About The Project
+
+## Background to understand the purpose of the website
 In German, nouns are associated with one of three genders: masculine, feminine or neuter.
 
 It leads to the question: 
@@ -53,11 +43,13 @@ How do we learn which gender is associated with a noun?
 ## Aim of the project
 Create a website to help the user learn German nouns by associating colors to the nouns.
 
-## Target audience
-Learners of German, especially those who want to improve their knowledge of German Nouns genders. 
+# Target audience
+Learners of German. Especially those who want to improve their knowledge of German Nouns genders and tend to use colors to learn.
 
 
 # User Experience
+The details of the design evolution, user project can be found **[here](UXEVOLUTIO.md)**. It includes diagrams, pictures, explanation of changes in the project process.
+
 ## Visitor Goals
 - ### First Time Visitor Goals
   - As a First Time Visitor, I want to easily understand the main purpose of the site.
@@ -93,9 +85,6 @@ Colors were inspired from the hero pictures. A color picker was used in PowerPoi
 <details>
 <h3 align="center"><img src="static/images/readme/Dashboard.png"></h3>
 </details>
-
-# Data structure
-
 
 # Features 
 
@@ -140,9 +129,11 @@ The footer was kept simple, with a sentence and an email address for contact. Si
 The website is designed to be suitable for all devices. For example, the responsive navigation bar turns into a burger button for phone screens.
 
 ## Future
-The user can add its own categories, 
-level of difficulties with the Nouns
-When a noun is clicked, the card can turn and a sentence with the noun is written to help learning nouns in a context.
+- The user can add his/her own categories
+
+- The difficulty level of the nouns
+
+- When a noun is clicked, the card can rotate and a sentence with the noun is written to help learn the nouns in context.
 
     
 # Technologies used
@@ -190,82 +181,14 @@ When a noun is clicked, the card can turn and a sentence with the noun is writte
 
 - [Linguee](https://www.linguee.com/) | used to translate nouns, verify the gender and get the plural of the nouns.
 
-- [cloudinary] | used to store images
+- [cloudinary](https://cloudinary.com/) | used to store images
 
 - [aconvert](https://www.aconvert.com/document/xls-to-json/) and [beautifytools](https://beautifytools.com/excel-to-json-converter.php) | used to convert excel file into json format
 
 
 # Tests
-## Code validation and issues found
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-- [W3C Markup Validation Homepage | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2F)
+The details of testing can be found [here](TESTING.md).
 
-- [W3C Markup Validation Login | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Flogin%2F)
-- [W3C Markup Validation Register | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Fsignup%2F)
-- [W3C Markup Validation Logout | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Flogout%2F)
-
-- [W3C CSS Validator | Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
-
-Javascipt code was tested using [jshint](https://jshint.com/) and no error was found with /*jshint esversion: 6 */
-
-Python the code was passed in [PEP8 online checker](http://pep8online.com) without showing errors except for few lines in the setting.py file because some line are too long. This was for lines automatically written at the Django installation and these lines were left.
-
-## Testing User Stories
-
-- ### First Time Visitor Goals
-  - As a First Time Visitor, I want to easily understand the main purpose of the site.
-    - The title DieDerDas + German with colors gives some indications about the purpose of the site and still in the Hero part, a sentence explains the purpose of the site "Learn German NAMES by associating colors with GENDERS".
-  - As a First Time Visitor, I want to easily understand how the learning works.
-    - An animation was made to explain how the website works and in the learning section, the user can click on buttons to see how it works with default nouns.
-  - As a First Time Visitor, I want to get motivation and inspiration.
-    - The colorful images have been placed in a way that stimulates the user and makes them feel surrounded by color.
-  - As a First Time Visitor, I want to start playing/learning rapidly.
-    - In the hero page, a button is placed to quickly access the learning section.
-  - As a First Time Visitor, I want to be able to easily navigate throughout the site.
-    - The navigation bar is fixed so that the user can always access the link it contains. The buttons are placed in such a way as to facilitate navigation on the site.
-  - As a First Time Visitor, I want to access the site across a range of devices.
-    - The site is designed for all devices
-
-- ### Returning Visitor Goals
-
-  - As a Returning Visitor, I want to be able to use my own Nouns.
-    - The user can log in to use, add, modify and delete nouns.
-  - As a Returning Visitor, I want to find how to contact the organisation with any questions I may have.
-    - In the footer, an email address is provided so that the user can contact the website owner.
-
-- ### Frequent User Goals
-  - As a Frequent User, I want to organize my learning in the website.
-    - A Todo section allows the user to organize his/her work.
-
-## Test on browsers
-The website was tested on computers using the browsers:
-- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
-- [Firefox](https://en.wikipedia.org/wiki/Firefox) 
-- [internet explorer](https://en.wikipedia.org/wiki/Internet_Explorer)
-- [Microsoft edge](https://en.wikipedia.org/wiki/Microsoft_Edge)
-- [Safary](https://en.wikipedia.org/wiki/Safari_(software))
-
-## Test on devices
-[Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
-
-## Automatic testing
-
-### Javascript
-
-### Python
-Some automatic python tests were conducted and can found in home and dashboard apps.
-The forms for creating Todo Items and entering nouns, the Todo model, and the views were tested.
-
-## Manual testing
-
-### Javascript
-The animations were tested by moving the mouse over German in Color several times. In the section Why not with colors by watching the text change.
-
-The color picker was tested by changing the colors several times, refreshing the page to make sure the colors stayed, and clicking on the reset default colors button.
-
-### Python
-The Backend was tested by clicking on the Die Der Das buttons, the theme button + the Die Der Das buttons. Creating new users and adding Nouns in the Dashboard, deleting and editing them. Creating ToDo Items, editing, deleting and toogle. In the homepage, when the user is logged in, it has been tested that custum nouns can be used and that they are not used in the default nouns.
 
 # Deployment
 ## GitHub Pages
@@ -363,14 +286,14 @@ The main courses were: "I think Therefore I Blog"; "Hello Django"; "Boutique Ado
 
 
 ## Read me file credits
-Some parts of the readme file from [farrelleoin93](https://github.com/farrelleoin93/12-acres-beer) have been adapted to write this readme file
+Some parts of the readme file from [farrelleoin93](https://github.com/farrelleoin93/12-acres-beer) have been adapted to write this readme file.
 
 ## Pictures credits
 The [picture in the hero section](https://pixabay.com/fr/photos/gobelins-carr%c3%a9-cercle-d%c3%a9tail-jaune-1491577/) was taken from Stux from [Pixabay](https://pixabay.com/).
 The [colored brain image](https://pixabay.com/fr/illustrations/r%c3%a9seau-de-neurones-artificiels-ann-3501528/) was from ahmedgad from [Pixabay](https://pixabay.com/)
 
 ## Nouns list
-The list of nouns comes mainly from the German courses I took at the IKI and IFU schools in Vienna. The genders, English translations and plurals were checked with [Linguee] (https://www.linguee.com/). Themes were done manually.
+The list of nouns comes mainly from the German courses I took at the IKI and IFU schools in Vienna. The genders, English translations and plurals were checked with [Linguee](https://www.linguee.com/). Themes were done manually.
 
 # Acknowledgments
 - My mentor, Nishant Kumar, for giving me the direction to start the project, for guiding me through the project, for giving me the idea to implement new features and for giving me feedback.
