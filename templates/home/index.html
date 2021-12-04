@@ -102,13 +102,13 @@
       <div class="col-6 col-md-4 col-lg-3">
         <div>Your NOUNS</div>
         <div class="diederdas-btn-group">
-          <a class="btn mt-1 mr-1 diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'Feminin' %}#learning">
+          <a class="btn mt-1 mr-1 diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'User' 'Feminin' %}#learning">
             Die
           </a>
-          <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'Masculin' %}#learning">
+          <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'User' 'Masculin' %}#learning">
             Der
           </a>
-          <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'user_gender' 'Neutral' %}#learning"> 
+          <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'User' 'Neutral' %}#learning"> 
             Das
           </a>
         </div>
@@ -132,13 +132,13 @@
           </div>
         {% else %}
           <div class="diederdas-btn-group">
-            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'gender' 'Feminin' %}#learning">
+            <a class="btn mt-1 mr-1  diederdas-btn feminin-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'Default' 'Feminin' %}#learning">
               Die
             </a>
-            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'gender' 'Masculin' %}#learning">
+            <a class="btn m-1 diederdas-btn masculin-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'Default' 'Masculin' %}#learning">
               Der
             </a>
-            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'gender' 'Neutral' %}#learning"> 
+            <a class="btn m-1 diederdas-btn neutral-bg" onClick="window.location.reload();" href="{% url 'user_or_default_gender' 'Default' 'Neutral' %}#learning"> 
               Das
             </a>
           </div>

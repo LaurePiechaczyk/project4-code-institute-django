@@ -62,12 +62,12 @@ The website was tested on computers using the browsers:
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
 
 
-### Javascript
+### Testing the website manually
 The animations were tested by moving the mouse over German in Color several times. In the section Why not with colors by watching the text change.
 
 The color picker was tested by changing the colors several times, refreshing the page to make sure the colors stayed, and clicking on the reset default colors button.
 
-### Python
+
 The Backend was tested by clicking on the Die Der Das buttons, the theme button + the Die Der Das buttons. 
 
 Creating new users and adding Names in the Dashboard, deleting and editing. 

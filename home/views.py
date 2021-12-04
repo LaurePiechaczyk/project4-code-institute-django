@@ -16,12 +16,6 @@ def home(request):
     return render(request, 'home/index.html', context)
 
 
-# For displaying default without categories
-def gender(request, clicked_gender):
-    context = index_with_noun_list_owned(clicked_gender, '2')
-    return render(request, 'home/index.html', context)
-
-
 # For displaying default with categories
 def go_to_category(request, category_id):
     category = get_object_or_404(NounCategory, id=category_id)
@@ -78,8 +72,13 @@ def index_with_noun_list_owned(chosen_gender, set_user):
     return context
 
 
-# To display only owned nouns. The user has to be logged in
-def user_gender(request, clicked_gender):
-    context = index_with_noun_list_owned(clicked_gender, request.user)
-    return render(request, 'home/index.html', context)
+def user_or_default_gender(request, user_or_default, clicked_gender):
+    if user_or_default == 'Default':
+        context = index_with_noun_list_owned(clicked_gender, '2')
+        return render(request, 'home/index.html', context)
+
+    else: 
+        context = index_with_noun_list_owned(clicked_gender, request.user)
+        return render(request, 'home/index.html', context)
+        
 
