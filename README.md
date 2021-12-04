@@ -2,7 +2,7 @@
 
 [View the live project here.](https://project4-german-in-color.herokuapp.com/)
 
-DieDerDas is a website to learn the gender of German nouns with colors. It's an original idea I had 2 years ago when I started learning German and I made a first prototype of the site in 2020 (which is no longer online). 
+DieDerDas is a website to learn the gender of German nouns with colors.
 
 In this version, users can log in and interact with the database to enter their own set of nouns or they can use the default nouns.
 
@@ -184,6 +184,8 @@ The website is designed to be suitable for all devices. For example, the respons
 - [cloudinary](https://cloudinary.com/) | used to store images
 
 - [aconvert](https://www.aconvert.com/document/xls-to-json/) and [beautifytools](https://beautifytools.com/excel-to-json-converter.php) | used to convert excel file into json format
+
+- [Inkscape](https://inkscape.org/) | used to create the favicon
 
 
 # Tests
