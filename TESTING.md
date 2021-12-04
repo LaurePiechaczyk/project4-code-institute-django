@@ -7,6 +7,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [W3C Markup Validation Register | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Fsignup%2F)
 - [W3C Markup Validation Logout | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2Faccounts%2Flogout%2F)
 
+- The Dashboard page HTML was checked by entering the code as text area and did not show error.
+
 - [W3C CSS Validator | Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fproject4-german-in-color.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 
@@ -66,4 +68,12 @@ The animations were tested by moving the mouse over German in Color several time
 The color picker was tested by changing the colors several times, refreshing the page to make sure the colors stayed, and clicking on the reset default colors button.
 
 ### Python
-The Backend was tested by clicking on the Die Der Das buttons, the theme button + the Die Der Das buttons. Creating new users and adding Names in the Dashboard, deleting and editing. Creating ToDo Items, editing, deleting and toggling. In the homepage, when the user is logged in, it has been tested that custum nouns can be used and that they are not used in the default nouns.
+The Backend was tested by clicking on the Die Der Das buttons, the theme button + the Die Der Das buttons. 
+
+Creating new users and adding Names in the Dashboard, deleting and editing. 
+
+Creating ToDo Items, editing, deleting and toggling. 
+
+In the homepage, when the user is logged in, it has been tested that custum nouns can be used and that they are not used in the default nouns.
+
+To ensure that the user knows they can log in, it has been verified that the user sees the status in the navigation bar.
