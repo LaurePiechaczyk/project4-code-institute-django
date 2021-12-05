@@ -14,5 +14,5 @@ urlpatterns = [
         views.categorie_gender, 
         name='categorie_gender'
         ),
-    path('<user_or_default>/<clicked_gender>', views.user_or_default_gender, name='user_or_default_gender'),
+    path('gender/<user_or_default>/<clicked_gender>', views.user_or_default_gender, name='user_or_default_gender'),
 ]
