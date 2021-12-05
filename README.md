@@ -109,7 +109,13 @@ The user can also enter, edit and delete nouns.
 <h3 align="center"><img src="static/images/readme/Dashboard-pic.png"></h3>
 
 - ### Add edit delete
+
+#### Add nouns
+It is expected that a user will want to enter many nouns. Therefore, when a noun is created, the user remains on the Add noun page and can enter many nouns in a row. A return to dashboard button is present so that the user can return to the dashboard easily .
 <h3 align="center"><img src="static/images/readme/add-nouns.png"></h3>
+
+#### Add Item
+It is expected that the user will not want to add many new tasks in a row. Therefore, when a ToDo item is added, the user is redirected to the dashboard with the Todo list open. This way, the user can see all ToDo items and get an overview of them.
 
 - ### Footer
 The footer was kept simple, with a sentence and an email address for contact. Since no social media was created for this project, no links were added. The email address is real and I would receive inquiries.
