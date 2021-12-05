@@ -17,28 +17,47 @@ Javascipt code was tested using [jshint](https://jshint.com/) and no error was f
 Python the code was passed in [PEP8 online checker](http://pep8online.com) without showing errors except for few lines in the setting.py file because some line are too long. This was for lines automatically written at the Django installation and these lines were left.
 
 ## Testing User Stories
-- ### First Time Visitor Goals
-  - As a First Time Visitor, I want to easily understand the main purpose of the site.
-    - The title DieDerDas + German with colors gives some indications about the purpose of the site and still in the Hero part, a sentence explains the purpose of the site "Learn German NAMES by associating colors with GENDERS".
-  - As a First Time Visitor, I want to easily understand how the learning works.
-    - An animation was made to explain how the website works and in the learning section, the user can click on buttons to see how it works with default nouns.
-  - As a First Time Visitor, I want to get motivation and inspiration.
+### Learners Goals
+  - As a German learner, I want to have an online tool to learn German, so that my German can improve.
+    - The site offers a new way to learn German
+
+
+  - As a German learner, I want to have tools to learn the specific challenges of the German learners, so that I can improve a specific area of the language
+    - The website focus on learning the genders of the nouns.
+
+
+  - As a person using colors to learn, I want to have tools uing colors to learn, so that I can improve by using the way my brain works naturally
+    - The website offers to associate German nouns gender to colors
+
+### First Time Visitor Goals
+  -  As a First Time Visitor, I want to Easily understand the main purpose of the site, so that So that I don't lose patience on the website
+      - The title DieDerDas + German with colors gives some indications about the purpose of the site and still in the Hero part, a sentence explains the purpose of the site "Learn German NAMES by associating colors with GENDERS".
+
+  - As a First Time Visitor, I want to Easily understand how learning works, so that I start to learn quickly.
+    - An animation is made to explain how the website works and in the learning section, the user can click on buttons to see how it works with default nouns.
+
+  - As a First Time Visitor, I want to Get motivation and inspiration, so that So that I can spend more time learning what I've started to learn
     - The colorful images have been placed in a way that stimulates the user and makes them feel surrounded by color.
-  - As a First Time Visitor, I want to start playing/learning rapidly.
+
+  - As a First Time Visitor, I want to Start playing/learning rapidly, so that I don't get distracted by anything else.
     - In the hero page, a button is placed to quickly access the learning section.
-  - As a First Time Visitor, I want to be able to easily navigate throughout the site.
+
+  - As a First Time Visitor, I want to Navigate the site easily, so that So that I don't lose patience on the website
     - The navigation bar is fixed so that the user can always access the link it contains. The buttons are placed in such a way as to facilitate navigation on the site.
-  - As a First Time Visitor, I want to access the site across a range of devices.
+
+  - As a First Time Visitor, I want to access the site from a range of devices, so that I can learn anywhere, anytime
     - The site is designed for all devices
 
-- ### Returning Visitor Goals
-  - As a Returning Visitor, I want to be able to use my own Nouns.
+### Returning Visitor Goals
+
+
+  - As a Returning Visitor, I want to I want to be able to use my own nouns, so that I can work with the vocabulary that interests me the most
     - The user can log in to use, add, modify and delete nouns.
-  - As a Returning Visitor, I want to find how to contact the organisation with any questions I may have.
+  - As a Returning Visitor, I want to I want to find how to contact the organisation with any questions I may have, so that So I can ask question and share feedback
     - In the footer, an email address is provided so that the user can contact the website owner.
 
 - ### Frequent User Goals
-  - As a Frequent User, I want to organize my learning in the website.
+  - As a Frequent User, I want to I want to organize my learning in the website, so that It motivates me to go there often and learn more
     - A Todo section allows the user to organize his/her work.
 
 
@@ -46,7 +65,15 @@ Python the code was passed in [PEP8 online checker](http://pep8online.com) witho
 
 ### Python
 Some automatic python tests were conducted and can be found in home and dashboard apps.
-The forms for creating Todo Items and entering nouns, the Todo model, and the views were tested.
+
+In the app home:
+  - file "test_views.py": The accesses to the home page and to the categories were tested.
+
+In the app dashboard:
+  - file "test_form.py": The forms for creating Todo Items and entering nouns were tested
+  - file "test_views.py": It was tested that the dashboard cannot be accessed if the user is not logged in.
+  - file "test_model.py": It was tested that when a Todo Item is created, it is by default not done and that the string of the item returns the name of the item.
+
 
 ## Manual testing
 

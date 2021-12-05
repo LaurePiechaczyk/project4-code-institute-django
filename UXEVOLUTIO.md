@@ -35,3 +35,7 @@ The design of the site evolved during the project as I received feedback from my
 
 The whole website was then redesigned to use these colors in order to have a certain homogeneity.
 
+## Modification of the color picker
+It was originally intended that the user could choose the custom colors in the dashboard. 
+However, this has been changed and the colors can be customized by anyone, even without being logged in. This change was made because I realize that it would be better (from the user perspective) if everyone could change the colors.
+

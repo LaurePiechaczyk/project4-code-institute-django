@@ -50,26 +50,15 @@ Learners of German. Especially those who want to improve their knowledge of Germ
 # User Experience
 The details of the design evolution, user project can be found **[here](UXEVOLUTIO.md)**. It includes diagrams, pictures, explanation of changes in the project process.
 
-## Visitor Goals
-- ### First Time Visitor Goals
-  - As a First Time Visitor, I want to easily understand the main purpose of the site.
-  - As a First Time Visitor, I want to easily understand how the learning works.
-  - As a First Time Visitor, I want to get motivation and inspiration.
-  - As a First Time Visitor, I want to start playing/learning rapidly.
-  - As a First Time Visitor, I want to learn and get motivation.
-  - As a First Time Visitor, I want to be able to easily navigate throughout the site.
-  - As a First Time Visitor, I want to access the site across a range of devices.
+## User Story
+The user project has been mapped in this github porjoct under issues. 
+The user story for this project is:
 
-- ### Returning Visitor Goals
-  - As a Returning Visitor, I want to be able to use my own Nouns.
-  - As a Returning Visitor, I want to find how to contact the organisation with any questions I may have.
-
-- ### Frequent User Goals
-  - As a Frequent User, I want to organize my learning in the website.
+<h3 align="center"><img src="static/images/readme/user-story-excel.png"></h3>
 
 ## UI Design
 - ### Fonts 
-Default Font from bootstrap were kept, i.e:"Helvetica Neue", Helvetica, Arial, sans-serif, because it looks nice and it is and easy to read
+Default Font from bootstrap were kept, i.e:"Helvetica Neue", Helvetica, Arial, sans-serif, because it looks nice and it is and easy to read.
 
 - ### Colors
 Colors were inspired from the hero pictures. A color picker was used in PowerPoint to take some colors codes in the picture. A dark background was used using the color #06546b; orange and Bordeaux buttons using the colors: #e75e2cc9; #5F1C29.
