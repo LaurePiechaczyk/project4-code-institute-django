@@ -51,8 +51,8 @@ Learners of German. Especially those who want to improve their knowledge of Germ
 The details of the design evolution, user project can be found **[here](UXEVOLUTIO.md)**. It includes diagrams, pictures, explanation of changes in the project process.
 
 ## User Story
-The user project has been mapped in this github porjoct under issues. 
-The user story for this project is:
+The user project has been mapped in this github project under issues. 
+The user stories for this project are:
 
 <h3 align="center"><img src="static/images/readme/user-story-excel.png"></h3>
 
