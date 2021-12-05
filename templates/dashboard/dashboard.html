@@ -28,7 +28,7 @@
                     {% for item in owned_items%}
                       <tr>
                         {% if item.done %}
-                        <td>{{item.name}}</td>
+                        <td><s>{{item.name}}</s></td>
                         {% else %}
                         <td>{{item.name}}</td>
                         {% endif %}
