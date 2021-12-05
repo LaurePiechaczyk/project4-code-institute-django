@@ -21,10 +21,8 @@ Python the code was passed in [PEP8 online checker](http://pep8online.com) witho
   - As a German learner, I want to have an online tool to learn German, so that my German can improve.
     - The site offers a new way to learn German
 
-
   - As a German learner, I want to have tools to learn the specific challenges of the German learners, so that I can improve a specific area of the language
     - The website focus on learning the genders of the nouns.
-
 
   - As a person using colors to learn, I want to have tools uing colors to learn, so that I can improve by using the way my brain works naturally
     - The website offers to associate German nouns gender to colors
@@ -49,14 +47,12 @@ Python the code was passed in [PEP8 online checker](http://pep8online.com) witho
     - The site is designed for all devices
 
 ### Returning Visitor Goals
-
-
   - As a Returning Visitor, I want to I want to be able to use my own nouns, so that I can work with the vocabulary that interests me the most
     - The user can log in to use, add, modify and delete nouns.
   - As a Returning Visitor, I want to I want to find how to contact the organisation with any questions I may have, so that So I can ask question and share feedback
     - In the footer, an email address is provided so that the user can contact the website owner.
 
-- ### Frequent User Goals
+### Frequent User Goals
   - As a Frequent User, I want to I want to organize my learning in the website, so that It motivates me to go there often and learn more
     - A Todo section allows the user to organize his/her work.
 
@@ -86,7 +82,7 @@ The website was tested on computers using the browsers:
 - [Safary](https://en.wikipedia.org/wiki/Safari_(software))
 
 ### Test on devices
-[Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
+[Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones including iphones and Samsung phones.
 
 
 ### Testing the website manually
@@ -104,3 +100,6 @@ Creating ToDo Items, editing, deleting and toggling.
 In the homepage, when the user is logged in, it has been tested that custum nouns can be used and that they are not used in the default nouns.
 
 To ensure that the user knows they can log in, it has been verified that the user sees the status in the navigation bar.
+
+## Known bugs
+The site does not work properly with Internet Explorer.
