@@ -156,11 +156,15 @@ The website is designed to be suitable for all devices. For example, the respons
 
 - [Gitpod](https://gitpod.io/workspaces) | used to code, commit to git and push the codes to github
 
-- [GitHub](https://github.com/) | used to store the project code, show it and deploy the website
+- [GitHub](https://github.com/) | used to store the project code, show it and organize the project using agile tools
+
+- [Jira](https://www.atlassian.com/software/jira/)| used to learn using an agile tool that gives project management tool
 
 - [Balsamiq](https://balsamiq.com/) |  used to create the wireframe
 
-- [Powerpoint](https://simple.wikipedia.org/wiki/Microsoft_PowerPoint) | used to create images from screenshots and work with images
+- [Powerpoint](https://simple.wikipedia.org/wiki/Microsoft_PowerPoint) | used to create images from screenshots, work with images and plan the project
+
+- [excel](https://www.microsoft.com/en-us/microsoft-365/excel) | used to plan the tasks and orgamize the project
 
 - [Word](https://en.wikipedia.org/wiki/Microsoft_Word) | used to correct the grammar
 
