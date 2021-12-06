@@ -168,5 +168,3 @@ $("#plural-check-box").click(function(){
         $(".words-container .plural-noun").css("opacity", "0")
 });
 
-
-
