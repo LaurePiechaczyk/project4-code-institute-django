@@ -1,6 +1,6 @@
 <h1 align="center"> Project 4 for Code Institute formation | DieDerDas | HTML - CSS - JS - DJANGO</h1>
 
-[View the live project here.](https://project4-german-in-color.herokuapp.com/)
+<h3><i>This project is currently offline</i></h3>
 
 DieDerDas is a website to learn the gender of German nouns with colors.
 
